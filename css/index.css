@@ -1,6 +1,5 @@
 .cabecalho {
     text-align: center;
-    padding: 2em 2em 1em 2em;
 }
 .cabecalho .titulo {
     -webkit-animation: aparece 3s;
@@ -85,20 +84,34 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
+    padding: .5em;
 }
 .icones-redes-sociais a {
-    width: 100%;
-    height: 100%;
+    padding: .5em;
+    width: 40px;
+    height: 40px;
     display: block;
     text-indent: -99999px;
     position: relative;
 }
+
+.github,
+.instagram,
+.linkedin {
+    background-repeat: no-repeat;
+    animation: aparece 3s;
+    animation-fill-mode: backwards;
+}
+
 .github {
     background-image: url(../img/github.png);
+    animation-delay: 1.5s;
 }
 .instagram {
     background-image: url(../img/instagram.png);
+    animation-delay: 2s;
 }
 .linkedin {
     background-image: url(../img/linkedin.png);
+    animation-delay: 2.5s;
 }
