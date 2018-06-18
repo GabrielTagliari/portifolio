@@ -1,0 +1,104 @@
+.cabecalho {
+    text-align: center;
+    padding: 2em 2em 1em 2em;
+}
+.cabecalho .titulo {
+    -webkit-animation: aparece 3s;
+    animation: aparece 3s;
+    animation-fill-mode: backwards;
+}
+.cabecalho .subtitulo {
+    -webkit-animation: aparece 3s;
+    animation: aparece 3s;
+    animation-delay: 1s;
+    animation-fill-mode: backwards;
+}
+.minha-foto {
+    height: 8em;
+    border-radius: 50%;
+    box-shadow: 0 0 .1em black;
+    position: relative;
+    top: 0;
+    right: 0;
+    margin: 1em;
+}
+/*.minha-foto:hover {
+    transition: transform 2s;
+    transform: scale(4) translateX(-1em) translateY(1em);
+}*/
+.titulo, 
+.subtitulo {
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: bold;
+}
+.titulo {
+    font-size: 2em;
+    text-transform: uppercase;
+}
+.subtitulo {
+    font-size: 1em;
+    text-transform: uppercase;
+}
+
+/* Menu */
+.menu ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 0em 2em 0em 2em;
+}
+.menu li {
+    padding: 1em;
+    margin: .2em;
+    text-transform: uppercase;
+    font-weight: bold;
+    border: 1px solid black;
+    text-align: center;
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: bold;
+    transition: 1s;
+}
+.menu li:hover {
+    transition: 1s;
+    background-color: black;
+    color: white;
+}
+.menu a {
+    color: inherit;
+    text-decoration: none;
+    flex: 1;
+}
+
+/* Rodapé */
+.rodape {
+    font-size: .8em;
+    color: #666;
+    padding: 1em;
+    position: fixed;
+    text-align: center;
+    bottom: 0;
+    width: 100%;
+}
+
+/* Redes Sociais */
+.icones-redes-sociais {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.icones-redes-sociais a {
+    width: 100%;
+    height: 100%;
+    display: block;
+    text-indent: -99999px;
+    position: relative;
+}
+.github {
+    background-image: url(../img/github.png);
+}
+.instagram {
+    background-image: url(../img/instagram.png);
+}
+.linkedin {
+    background-image: url(../img/linkedin.png);
+}
