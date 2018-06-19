@@ -1,0 +1,44 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300|Oswald|Poiret+One');
+
+body {
+    background-image: url(../img/fundo.jpg);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-attachment: fixed;
+    background-size: cover;
+}
+.cabecalho {
+    position: fixed;
+    width: 100%;
+    box-shadow: 1px 1px rgba(136, 136, 136, 0.2);
+}
+.menu {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+}
+.menu a {
+    color: white;
+    text-decoration: none;
+    margin: .5em;
+    font-weight: bold;
+    text-transform: uppercase;
+    margin: 2em;
+}
+.menu .item-menu{
+    color: #999999;
+    font-family: 'Poiret One', cursive;
+    font-weight: bold;
+}
+.menu .item-menu:hover {
+    transform: scale(1.2);
+    transition: transform 1s;
+    text-decoration: underline;
+}
+.menu .item-menu-principal {
+    font-size: 2.5em;
+    color: orange;
+    font-family: 'Oswald', sans-serif;
+}

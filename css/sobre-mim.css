@@ -1,0 +1,32 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300|Oswald|Poiret+One');
+
+.sobre-mim {
+    display: flex;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+.titulo,
+.texto {
+    color: white;
+    font-family: 'Poiret One', cursive;
+    margin: 1em;
+}
+.texto {
+    font-size: 1em;
+    text-align: justify;
+    margin: 1rem;
+}
+.titulo {
+    font-size: 3em;
+    margin: 1rem;
+}
+ .minha-foto { 
+    height: 10em;
+    box-shadow: 0 0 .1em black;
+    position: relative;
+    margin: 1em;
+    float: left;
+}

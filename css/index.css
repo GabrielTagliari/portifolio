@@ -1,117 +1,22 @@
-.cabecalho {
-    text-align: center;
-}
-.cabecalho .titulo {
-    -webkit-animation: aparece 3s;
-    animation: aparece 3s;
-    animation-fill-mode: backwards;
-}
-.cabecalho .subtitulo {
-    -webkit-animation: aparece 3s;
-    animation: aparece 3s;
-    animation-delay: 1s;
-    animation-fill-mode: backwards;
-}
-.minha-foto {
-    height: 8em;
-    border-radius: 50%;
-    box-shadow: 0 0 .1em black;
-    position: relative;
-    top: 0;
-    right: 0;
-    margin: 1em;
-}
-/*.minha-foto:hover {
-    transition: transform 2s;
-    transform: scale(4) translateX(-1em) translateY(1em);
-}*/
-.titulo, 
-.subtitulo {
-    font-family: 'Courier New', Courier, monospace;
-    font-weight: bold;
-}
-.titulo {
-    font-size: 2em;
-    text-transform: uppercase;
-}
-.subtitulo {
-    font-size: 1em;
-    text-transform: uppercase;
-}
+@import url('https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300|Oswald|Poiret+One');
 
-/* Menu */
-.menu ul {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    padding: 0em 2em 0em 2em;
-}
-.menu li {
-    padding: 1em;
-    margin: .2em;
-    text-transform: uppercase;
-    font-weight: bold;
-    border: 1px solid black;
-    text-align: center;
-    font-family: 'Courier New', Courier, monospace;
-    font-weight: bold;
-    transition: 1s;
-}
-.menu li:hover {
-    transition: 1s;
-    background-color: black;
+.inicio {
+    position: absolute;
+    margin-top: 1em;
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%, -50%);
     color: white;
-}
-.menu a {
-    color: inherit;
-    text-decoration: none;
-    flex: 1;
-}
-
-/* Rodapé */
-.rodape {
-    font-size: .8em;
-    color: #666;
-    padding: 1em;
-    position: fixed;
+    font-family: 'Poiret One', cursive;
     text-align: center;
-    bottom: 0;
-    width: 100%;
 }
-
-/* Redes Sociais */
-.icones-redes-sociais {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    padding: .5em;
+.nome,
+.funcao {
+    margin: 2rem;
 }
-.icones-redes-sociais a {
-    padding: .5em;
-    width: 40px;
-    height: 40px;
-    display: block;
-    text-indent: -99999px;
-    position: relative;
+.nome {
+    font-size: 3em;
 }
-
-.github,
-.instagram,
-.linkedin {
-    background-repeat: no-repeat;
-    animation: aparece 3s;
-    animation-fill-mode: backwards;
-}
-
-.github {
-    background-image: url(../img/github.png);
-    animation-delay: 1.5s;
-}
-.instagram {
-    background-image: url(../img/instagram.png);
-    animation-delay: 2s;
-}
-.linkedin {
-    background-image: url(../img/linkedin.png);
-    animation-delay: 2.5s;
+.funcao {
+    font-size: 2em;
 }
