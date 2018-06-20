@@ -22,6 +22,7 @@
 .titulo {
     font-size: 3em;
     margin: 1rem;
+    text-align: left;
 }
  .minha-foto { 
     height: 10em;

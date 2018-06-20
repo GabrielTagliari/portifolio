@@ -1,14 +1,29 @@
 @import url('https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300|Oswald|Poiret+One');
 
-body {
-    background-image: url(../img/fundo.jpg);
+.background {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: url(../img/fundo.jpg);
     background-repeat: no-repeat;
     background-position: center center;
     background-attachment: fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
     background-size: cover;
 }
+.darken {
+    background-image: 
+    linear-gradient(
+    rgba(0, 0, 0, 0.8   ),
+    rgba(0, 0, 0, 0.8)
+    ),
+    url(../img/fundo.jpg);
+}
+
 .cabecalho {
     position: fixed;
+    background-color: #0c0c0c;
     width: 100%;
     box-shadow: 1px 1px rgba(136, 136, 136, 0.2);
 }
