@@ -6,7 +6,7 @@
         opacity: 1;
     }
 }
-@keyframes aparece {
+@-webkit-keyframes aparece {
     from {
         opacity: 0;
     }
