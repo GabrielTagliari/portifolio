@@ -1,5 +1,53 @@
 @import url('https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300|Oswald|Poiret+One');
 
+html, body {
+    height: 100%;
+}
+body {
+    display: flex;
+    flex-direction: column;
+}
+main {
+    height: inherit;
+}
+/* Sections */
+section {
+    height: 100%;
+}
+/* section::after {
+    content: '';
+    display: block;
+    position: relative;
+    width: 1em;
+    height: 1em;
+    bottom: 0;
+    left: 50%;
+    background-color: white;
+} */
+section#principal {
+    background-color: black;
+    /* background: url(../img/fundo.jpg);
+    background-repeat: no-repeat;
+    background-position: center center;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    background-size: cover;
+    background-image: 
+    linear-gradient(
+    rgba(0, 0, 0, 0.6),
+    rgba(0, 0, 0, 0.6)
+    ),
+    url(../img/fundo.jpg); */
+}
+section#segunda {
+    background-color: red;
+}
+section#terceira {
+    background-color: purple;
+}
+section#quarta {
+    background-color: greenyellow;
+}
 .inicio {
     position: absolute;
     margin-top: 1em;

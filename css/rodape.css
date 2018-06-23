@@ -1,11 +1,12 @@
 @import url('https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300|Oswald|Poiret+One');
 
 .rodape {
+    position: relative;
     font-size: .8em;
     color: white;
+    background-color: black;
     padding: 1em;
     height: 1em;
-    position: fixed;
     text-align: center;
     bottom: 0;
     width: 100%;

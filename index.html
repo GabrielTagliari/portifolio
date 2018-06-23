@@ -4,78 +4,70 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <!-- Style -->
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/animation.css">
     <link rel="stylesheet" href="css/menu.css">
     <link rel="stylesheet" href="css/rodape.css">
     <link rel="stylesheet" href="css/index.css">
+
     <title>Gabriel Tagliari Rodrigo</title>
 </head>
 
 <body>
-    <div class="background darken"></div>
-    <header class="cabecalho">
-        <nav>
-            <ul class="menu">
-                <a href="index.html">
-                    <li class="item-menu">
-                        Home
-                    </li>
-                </a>
-                <a href="#">
-                    <li class="item-menu">
-                        Portifólio
-                    </li>
-                </a>
-                <a href="index.html">
-                    <li class="item-menu-principal">
-                        GTR
-                    </li>
-                </a>
-                <a href="sobre-mim.html">
-                    <li class="item-menu">
-                        Sobre Mim
-                    </li>
-                </a>
-                <a href="#">
-                    <li class="item-menu">
-                        Contato
-                    </li>
-                </a>
-            </ul>
-        </nav>
-    </header>
     <main>
-        <div class="inicio">
-            <div>
+        <header class="section" id="cabecalho">
+            <nav>
+                <ul class="menu">
+                    <a href="#" id="cabecalho" class="navegacao">
+                        <li class="item-menu">
+                            Home
+                        </li>
+                    </a>
+                    <a href="#" id="segunda" class="navegacao">
+                        <li class="item-menu">
+                            Portifólio
+                        </li>
+                    </a>
+                    <a href="#" id="cabecalho" class="navegacao">
+                        <li class="item-menu-principal">
+                            GTR
+                        </li>
+                    </a>
+                    <a href="#" id="terceira" class="navegacao">
+                        <li class="item-menu">
+                            Sobre Mim
+                        </li>
+                    </a>
+                    <a href="#" id="quarta" class="navegacao">
+                        <li class="item-menu">
+                            Contato
+                        </li>
+                    </a>
+                </ul>
+            </nav>
+        </header>
+        <section id="principal">
+            <div class="inicio">
                 <p class="nome">Gabriel Tagliari Rodrigo</p>
                 <p class="funcao">Developer</p>
                 <div class="botao botao-comecar">
                     <span class="texto-botao">Começar</span>
                 </div>
-            </div>    
-        </div>
+            </div>
+        </section>
+        <section class="section" id="segunda"></section>
+        <section class="section" id="terceira"></section>
+        <section class="section" id="quarta"></section>
+        <footer class="rodape">
+            &copy; 2018 Gabriel Tagliari Rodrigo
+        </footer>
     </main>
-    <!-- <ul class="icones-redes-sociais">
-        <li>
-            <a href="https://github.com/gabrieltagliari" class="github">
-                Github
-            </a>
-        </li>
-        <li>
-            <a href="https://www.instagram.com/gabriel_tagliari" class="instagram">
-                Instagram
-            </a>
-        </li>
-        <li>
-            <a href="https://www.linkedin.com/in/gabrieltagliari" class="linkedin">
-                LinkedIn
-            </a>
-        </li>
-    </ul> -->
-    <footer class="rodape">
-        &copy; 2018 Gabriel Tagliari Rodrigo
-    </footer>
+
+    <!-- JS -->
+    <script src="js/jquery.min.js"></script>
+    <script src="js/index.js"></script>
 </body>
 
 </html>

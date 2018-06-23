@@ -17,19 +17,13 @@
 .instagram,
 .linkedin {
     background-repeat: no-repeat;
-    animation: aparece 3s;
-    animation-fill-mode: backwards;
 }
-
 .github {
     background-image: url(../img/github.png);
-    animation-delay: 1.5s;
 }
 .instagram {
     background-image: url(../img/instagram.png);
-    animation-delay: 2s;
 }
 .linkedin {
     background-image: url(../img/linkedin.png);
-    animation-delay: 2.5s;
 }
