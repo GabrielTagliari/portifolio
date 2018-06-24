@@ -10,31 +10,11 @@ body {
 main {
     height: inherit;
 }
+
+/* Sections */
 section {
     height: 100%;
     position: relative;
-}
-section#principal {
-    height: calc(100% - 6em);
-    margin-top: 6em;
-    background: url(../img/fundo.jpg);
-    background-repeat: no-repeat;
-    background-position: center center;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    background-size: cover;
-    background-image: 
-    linear-gradient(
-    rgba(0, 0, 0, 0.6),
-    rgba(0, 0, 0, 0.6)
-    ),
-    url(../img/fundo.jpg);
-}
-section#segunda {
-    display: flex;
-    box-sizing: border-box;
-    background-color: lightblue;
-    padding: 10em;
 }
 .avancar {
     position: absolute;
@@ -50,17 +30,26 @@ section#segunda {
     animation-direction: alternate;
     animation-timing-function: ease-in-out;
 }
-.minha-foto {
-    position: relative;
-}
-section#terceira {
-    background-color: purple;
-}
-section#quarta {
-    background-color: greenyellow;
+
+/* Seção Principal */
+section#principal {
+    height: calc(100% - 6em);
+    margin-top: 6em;
+    background: url(../img/fundo.jpg);
+    background-repeat: no-repeat;
+    background-position: center center;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    background-size: cover;
+    background-image: 
+    linear-gradient(
+    rgba(0, 0, 0, 0.7),
+    rgba(0, 0, 0, 0.7)
+    ),
+    url(../img/fundo.jpg);
 }
 .inicio {
-    position: relative;
+    position: absolute;
     color: white;
     top: 45%;
     left: 50%;
@@ -68,10 +57,10 @@ section#quarta {
     font-family: 'Poiret One', cursive;
     text-align: center;
 }
-.nome,
+/* .nome,
 .funcao {
     margin: 3rem;
-}
+} */
 .nome {
     font-size: 3em;
     text-transform: uppercase;
@@ -79,10 +68,11 @@ section#quarta {
 }
 .funcao {
     font-size: 2em;
+    margin: .8em 0 2em 0;
 }
 .botao {
     position: relative;
-    color: orange;
+    color: #FF7530;
     width: 256px;
     font-weight: bold;
     height: 64px;
@@ -93,7 +83,7 @@ section#quarta {
 }
 .botao a {
     text-decoration: none;
-    color: orange;
+    color: #FF7530;
     text-transform: uppercase;
 }
 .botao::before, 
@@ -115,7 +105,7 @@ section#quarta {
 }
 .me-conheca::after {
     transition: all 0.3s;
-    border: 2px solid orange;
+    border: 2px solid #FF7530;
     border-radius: 60px;
 }
 .me-conheca:hover::before {
@@ -125,4 +115,87 @@ section#quarta {
 .me-conheca:hover::after {
     transform: scale(1, .1);
     opacity: 0;
+}
+
+/* Seção Sobre Mim */
+section#segunda {
+    display: flex;
+    flex-wrap: wrap;
+    box-sizing: border-box;
+    background-color:#F9F9F9;
+    padding: 4em;
+}
+section#segunda .avancar {
+    border-color: black;
+}
+.minha-foto {
+    flex: 1;
+    position: relative;
+    width: 100%;
+    height: auto;
+    flex-shrink: 2;
+}
+.sobre-mim {
+    flex: 2;
+    align-self: center;
+}
+.sobre-mim-titulo,
+.sobre-mim-descricao {
+    text-transform: uppercase;
+    font-family: 'Oswald', sans-serif;
+    text-align: justify;
+    margin-left: 4rem;
+}
+.sobre-mim-titulo {
+    font-size: 3em;
+    margin-bottom: 4rem;
+}
+.sobre-mim-descricao {
+    font-size: 1.2em;
+}
+
+/* Seção Portifólio */
+section#terceira {
+    background-color: #76d275;
+}
+
+/* Seção Tecnologias */
+section#quarta {
+    background-color: greenyellow;
+}
+
+/* Seção Contato */
+section#quinta {
+    background-color: white;
+}
+
+/* Redes Sociais */
+.icones-redes-sociais {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: .5em;
+}
+.icones-redes-sociais a {
+    padding: .5em;
+    width: 40px;
+    height: 40px;
+    display: block;
+    text-indent: -99999px;
+    position: relative;
+    background-size: 100%;
+}
+.github,
+.instagram,
+.linkedin {
+    background-repeat: no-repeat;
+}
+.github {
+    background-image: url(../img/github.svg);
+}
+.instagram {
+    background-image: url(../img/instagram.svg);
+}
+.linkedin {
+    background-image: url(../img/linkedin.svg);
 }
