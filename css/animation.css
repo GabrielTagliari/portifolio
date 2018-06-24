@@ -1,16 +1,5 @@
-@-webkit-keyframes aparece {
-    from {
-        opacity: 0;
-    }
+@-webkit-keyframes sobe-desce {
     to {
-        opacity: 1;
-    }
-}
-@-webkit-keyframes aparece {
-    from {
-        opacity: 0;
-    }
-    to {
-        opacity: 1;
+        bottom: 3.5em;
     }
 }

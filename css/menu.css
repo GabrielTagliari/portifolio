@@ -1,5 +1,72 @@
 @import url('https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300|Oswald|Poiret+One');
 
+header {
+    position: absolute;
+    background-color: black;
+    width: 100%;
+    height: 6em;
+    box-shadow: 100px 100px rgba(255, 255, 255, 1);
+}
+nav,
+.menu {
+    height: 100%;
+}
+.menu {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    text-transform: uppercase;
+    font-family: 'Poiret One', cursive;
+    font-weight: bold;
+}
+.menu * {
+  box-sizing: border-box;
+  -webkit-transition: all 0.35s ease;
+  transition: all 0.35s ease;
+}
+.menu li {
+  display: inline-block;
+  list-style: outside none none;
+  margin: 0 1.5em;
+  overflow: hidden;
+}
+.menu a {
+  padding: 0.3em 0;
+  color: rgba(255, 255, 255, 0.6);
+  position: relative;
+  display: inline-block;
+  letter-spacing: 1px;
+  margin: 0;
+  text-decoration: none;
+}
+.menu a:before,
+.menu a:after {
+  position: absolute;
+  -webkit-transition: all 0.35s ease;
+  transition: all 0.35s ease;
+}
+.menu a:before {
+  bottom: 100%;
+  display: block;
+  height: 3px;
+  width: 100%;
+  content: "";
+  background-color: #e67e22;
+}
+.menu a:after {
+  padding: 0.3em 0;
+  position: absolute;
+  bottom: 100%;
+  left: 0;
+  content: attr(data-hover);
+  color: white;
+  white-space: nowrap;
+}
+.menu li:hover a,
+.menu .current a {
+  transform: translateY(100%);
+}
 .background {
     position: absolute;
     width: 100%;
@@ -19,38 +86,4 @@
     rgba(0, 0, 0, 0.9)
     ),
     url(../img/fundo.jpg);
-}
-
-header {
-    width: 100%;
-    box-shadow: 1px 1px rgba(136, 136, 136, 0.2);
-}
-.menu {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    align-items: center;
-    justify-content: center;
-}
-.menu a {
-    color: white;
-    text-decoration: none;
-    font-weight: bold;
-    text-transform: uppercase;
-    margin: .5em 2em;
-}
-.menu .item-menu{
-    color: #999999;
-    font-family: 'Poiret One', cursive;
-    font-weight: bold;
-}
-.menu .item-menu:hover {
-    transform: scale(1.2);
-    transition: transform 1s;
-    text-decoration: underline;
-}
-.menu .item-menu-principal {
-    font-size: 2.5em;
-    color: orange;
-    font-family: 'Oswald', sans-serif;
 }
