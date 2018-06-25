@@ -1,24 +1,22 @@
 @import url('https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300|Oswald|Poiret+One');
 
 header {
-    position: absolute;
-    background-color: black;
-    width: 100%;
-    height: 6em;
-    box-shadow: 100px 100px rgba(255, 255, 255, 1);
-}
-nav,
-.menu {
-    height: 100%;
+  position: fixed;
+  overflow: hidden;
+  background-color: rgba(0, 0, 0, 0.9);
+  top: 0;
+  width: 100%;
+  z-index: 1;
 }
 .menu {
-    display: flex;
-    flex-flow: row wrap;
-    align-items: center;
-    justify-content: center;
-    text-transform: uppercase;
-    font-family: 'Poiret One', cursive;
-    font-weight: bold;
+  display: flex;
+  flex-flow: row wrap;
+  align-items: center;
+  justify-content: center;
+  text-transform: uppercase;
+  font-family: 'Poiret One', cursive;
+  font-weight: bold;
+  padding: 1em 0 1em 0;
 }
 .menu * {
   box-sizing: border-box;
@@ -66,24 +64,4 @@ nav,
 .menu li:hover a,
 .menu .current a {
   transform: translateY(100%);
-}
-.background {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    background: url(../img/fundo.jpg);
-    background-repeat: no-repeat;
-    background-position: center center;
-    background-attachment: fixed;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    background-size: cover;
-}
-.darken {
-    background-image: 
-    linear-gradient(
-    rgba(0, 0, 0, 0.9),
-    rgba(0, 0, 0, 0.9)
-    ),
-    url(../img/fundo.jpg);
 }

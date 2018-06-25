@@ -1,0 +1,60 @@
+@media all and (max-width: 750px){
+    .minha-foto {
+        display: none;
+    }
+    section:nth-child(2) {
+        background: url(../img/minha-foto.jpg);
+        background-repeat: no-repeat;
+        background-position: center center;
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        background-size: cover;
+        background-image: 
+        linear-gradient(
+        rgba(0, 0, 0, 0.7),
+        rgba(0, 0, 0, 0.7)
+        ),
+        url(../img/minha-foto.jpg);
+    }
+    .sobre-mim {
+        position: absolute;
+        top: 50%;
+        color: white;
+    }
+}
+@media all and (max-width: 680px){
+    section {
+        padding-top: 5em;
+        height: calc(100vh - 5em);
+    }
+    section:last-of-type {
+        height: calc(100vh - 12.5em);
+    }
+}
+@media all and (max-width: 400px){
+    section {
+        padding-top: 7em;
+        height: calc(100vh - 7em);
+    }
+    section:last-of-type {
+        height: calc(100vh - 15.5em);
+    }
+}
+@media all and (max-width: 300px){
+    section {
+        padding-top: 8.5em;
+        height: calc(100vh - 8.5em);
+    }
+    section:last-of-type {
+        height: calc(100vh - 19em);
+    }
+}
+@media all and (max-width: 250px){
+    section {
+        padding-top: 10em;
+        height: calc(100vh - 10em);
+    }
+    section:last-of-type {
+        height: calc(100vh - 23em);
+    }
+}

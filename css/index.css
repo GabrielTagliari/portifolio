@@ -1,24 +1,14 @@
-@import url('https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300|Oswald|Poiret+One');
-
 html, body {
     height: 100%;
+    margin: 0;
 }
-body {
-    display: flex;
-    flex-direction: column;
-}
-main {
-    height: inherit;
-}
-
-/* Sections */
 section {
-    height: 100%;
-    position: relative;
+    padding-top: 3.5em;
+    height: calc(100vh - 3.5em);
 }
 .avancar {
-    position: absolute;
-    bottom: 1em;
+    position: relative;
+    bottom: .5em;
     left:50%;
     width: 1em;
     height: 1em;
@@ -30,11 +20,7 @@ section {
     animation-direction: alternate;
     animation-timing-function: ease-in-out;
 }
-
-/* Seção Principal */
-section#principal {
-    height: calc(100% - 6em);
-    margin-top: 6em;
+section:nth-child(1) {
     background: url(../img/fundo.jpg);
     background-repeat: no-repeat;
     background-position: center center;
@@ -48,14 +34,60 @@ section#principal {
     ),
     url(../img/fundo.jpg);
 }
+section:nth-child(2) {
+    background: rgb(215, 215, 215);
+}
+.container {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    position: relative;
+    box-sizing: border-box;
+    padding: 0 2em 0 2em;
+}
+.minha-foto {
+    flex: 1;
+    width: 30%;
+    height: 30%;
+    border-radius: 10px;
+    padding: 3rem 1rem 3rem 3rem;
+}
+.sobre-mim {
+    flex: 2;
+    width: 60%;
+    padding: 3rem 3rem 3rem 1rem;
+}
+.sobre-mim-titulo,
+.sobre-mim-descricao {
+    text-transform: uppercase;
+    font-family: 'Oswald', sans-serif;
+    text-align: justify;
+}
+.sobre-mim-titulo {
+    font-size: 3em;
+    padding-bottom: 0.5em;
+}
+.sobre-mim-descricao {
+    font-size: 1.2em;
+}
+section:nth-child(3) {
+    background: purple;
+}
+section:nth-child(4) {
+    background: red;
+}
+section:last-of-type {
+    height: calc(100vh - 9.5em);
+}
 .inicio {
-    position: absolute;
+    position: relative;
     color: white;
     top: 45%;
     left: 50%;
     transform: translate(-50%, -50%);
     font-family: 'Poiret One', cursive;
     text-align: center;
+    padding: 0 1em 0 1em;
 }
 .nome {
     font-size: 3em;
@@ -112,63 +144,6 @@ section#principal {
     transform: scale(1, .1);
     opacity: 0;
 }
-
-/* Seção Sobre Mim */
-section#segunda {
-    background-color:#F9F9F9;
-}
-section#segunda .avancar {
-    border-color: black;
-}
-.container {
-    display: flex;
-    flex-wrap: wrap;
-    box-sizing: border-box;
-    padding: 4em;
-    height: 100%;
-}
-.minha-foto {
-    flex: 1;
-    position: relative;
-    width: 100%;
-    height: auto;
-    flex-shrink: 2;
-    padding: 1em 1em 1em 0;
-}
-.sobre-mim {
-    flex: 2;
-    align-self: center;
-}
-.sobre-mim-titulo,
-.sobre-mim-descricao {
-    text-transform: uppercase;
-    font-family: 'Oswald', sans-serif;
-    text-align: justify;
-    margin: 0 1rem 0 1rem;
-}
-.sobre-mim-titulo {
-    font-size: 3em;
-    margin-bottom: 4rem;
-}
-.sobre-mim-descricao {
-    font-size: 1.2em;
-}
-
-/* Seção Portifólio */
-section#terceira {
-    background-color: #76d275;
-}
-
-/* Seção Tecnologias */
-section#quarta {
-    background-color: greenyellow;
-}
-
-/* Seção Contato */
-section#quinta {
-    background-color: white;
-}
-
 /* Redes Sociais */
 .icones-redes-sociais {
     display: flex;
