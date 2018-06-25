@@ -21,6 +21,12 @@
         top: 50%;
         color: white;
     }
+    .sobre-mim-titulo {
+        font-size: 1.5em;
+    }
+    .sobre-mim-descricao {
+        font-size: 1em;
+    }
 }
 @media all and (max-width: 680px){
     section {
