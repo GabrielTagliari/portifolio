@@ -17,10 +17,18 @@
         url(../img/minha-foto.jpg);
     }
     .sobre-mim {
-        position: absolute;
-        top: 50%;
         color: white;
+        margin: 0;
+        padding: 0;
     }
+    .sobre-mim-titulo {
+        font-size: 1.5em;
+    }
+    .sobre-mim-descricao {
+        font-size: 1em;
+    }
+}
+@media all and (max-width: 320px){
     .sobre-mim-titulo {
         font-size: 1.5em;
     }
@@ -46,13 +54,22 @@
         height: calc(100vh - 15.5em);
     }
 }
-@media all and (max-width: 300px){
+@media all and (max-width: 320px){
     section {
         padding-top: 8.5em;
         height: calc(100vh - 8.5em);
     }
     section:last-of-type {
         height: calc(100vh - 19em);
+    }
+    .sobre-mim {
+        padding-top: 1em;
+    }
+    .sobre-mim-titulo {
+        font-size: 1em;
+    }
+    .sobre-mim-descricao {
+        font-size: .8em;
     }
 }
 @media all and (max-width: 250px){
