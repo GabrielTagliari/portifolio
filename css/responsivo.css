@@ -6,34 +6,29 @@
     top: 0;
     transition: .5s;
 }
-@media all and (max-width: 750px){
-    .minha-foto {
-        display: none;
+@media all and (max-width: 950px){
+    .container {
+        flex-direction: column;
     }
-    section:nth-child(2) {
-        background: url(../img/minha-foto.jpg);
-        background-repeat: no-repeat;
-        background-position: center center;
-        -webkit-background-size: cover;
-        -moz-background-size: cover;
-        background-size: cover;
-        background-image: 
-        linear-gradient(
-        rgba(0, 0, 0, 0.7),
-        rgba(0, 0, 0, 0.7)
-        ),
-        url(../img/minha-foto.jpg);
+    .minha-foto {
+        align-self: center;
+        padding: 0;
     }
     .sobre-mim {
-        color: white;
-        margin: 0;
-        padding: 0;
+        padding: 2em 0 0 0;
+        width: 100%;
     }
     .sobre-mim-titulo {
         font-size: 1.5em;
     }
     .sobre-mim-descricao {
         font-size: 1em;
+    }
+}
+@media all and (max-width: 550px){
+    .minha-foto {
+        width: 145px;
+        height: 165px;
     }
 }
 @media all and (max-width: 320px){
