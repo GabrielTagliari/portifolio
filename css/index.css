@@ -140,43 +140,88 @@ section:nth-child(2) {
     text-align: justify;
 }
 section:nth-child(3) {
-    background: purple;
+    background-color: #272725;
 }
 section:nth-child(4) {
-    background: red;
+    background: rgb(250, 250, 250);
 }
 section:last-of-type {
     position: relative;
+    height: 80vh;
+    background-color: #272725;
 }
 section:last-of-type h1 {
-    font-size: 2em;
+    font-size: 3em;
     text-transform: uppercase;
-    color: black;
+    color: white;
     font-weight: bold;
     position: relative;
     text-align: center;
+    padding-top: 1em;
     font-family: 'Abel', sans-serif;
+}
+.contatos-box {
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+    justify-content: space-around;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.whatsapp-box {
+    display: flex;
+    flex-flow: row wrap;
+    position: relative;
+    color: white;
+}
+.whatsapp-box img {
+    width: 5.5em;
+    height: 5.5em;
+    border-radius: 50%;
+    border: 2px solid white;
+}
+.nome-whatsapp {
+    font-family: 'Abel', sans-serif;
+    font-size: 1.4em;
+    padding: 1em;
+    text-transform: uppercase;
 }
 .icones-redes-sociais {
     display: flex;
     flex-flow: row wrap;
-    justify-content: center;
-    bottom: 0;
-    padding: .5em;
+    position: relative;
+    justify-content: space-around;
 }
 .icones-redes-sociais a {
     margin: 1em;
-    width: 4em;
-    height: 4em;
+    width: 5em;
+    height: 5em;
     display: block;
     text-indent: -99999px;
     position: relative;
     background-size: 100%;
 }
+.icones-redes-sociais > li::before {
+    content: '';
+    display: block;
+    position: absolute;
+    width: 7em;
+    height: 7em;
+    -moz-border-radius: 50%;
+    -webkit-border-radius: 50%;
+    border-radius: 50%;
+    border: 1px solid black;
+    background-color: white;
+    transform: scale(.7);
+}
 .github {
+    transform: scale(.9);
     background-image: url(../img/github.svg);
 }
 .instagram {
+    transform: scale(.7);
     background-image: url(../img/instagram.svg);
 }
 .linkedin {
