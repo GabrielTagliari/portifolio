@@ -99,7 +99,7 @@ section:nth-child(1) {
     opacity: 0;
 }
 section:nth-child(2) {
-    background: rgb(215, 215, 215);
+    background: rgb(250, 250, 250);
 }
 .container {
     display: flex;
