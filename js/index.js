@@ -1,5 +1,10 @@
 var prevScrollpos = window.pageYOffset;
 var cabecalho = document.getElementById("cabecalho");
+var anoNascimento = new Date(1993, 04, 25);
+var hoje = new Date();
+var idade = Math.floor((hoje-anoNascimento) / (365.25 * 24 * 60 * 60 * 1000));
+
+$('#idade').html(idade+' anos');
 
 window.onscroll = function() {
     var currentScrollPos = window.pageYOffset;

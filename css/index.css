@@ -132,11 +132,11 @@ section:nth-child(2) {
 }
 .sobre-mim-titulo {
     font-size: 3em;
-    padding-bottom: 0.5em;
+    padding-bottom: 1em;
     text-transform: uppercase;
 }
 .sobre-mim-descricao {
-    font-size: 1.2em;
+    font-size: 1.5em;
     text-align: justify;
 }
 section:nth-child(3) {
@@ -148,7 +148,7 @@ section:nth-child(4) {
 section:last-of-type {
     position: relative;
 }
-section:last-of-type p {
+section:last-of-type h1 {
     font-size: 2em;
     text-transform: uppercase;
     color: black;
