@@ -102,31 +102,33 @@ section:nth-child(2) {
     background: rgb(250, 250, 250);
 }
 .container {
+    position: relative;
     display: flex;
     flex-flow: row wrap;
-    justify-content: center;
-    position: absolute;
-    height: 100%;
+    width: 100%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
     box-sizing: border-box;
-    padding: 2em;
+    padding: 0 2em 0 2em;
+}
+.imagem {
+    flex: 1;
+    text-align: center;
 }
 .minha-foto {
-    flex: 1;
-    width: 35%;
-    height: auto;
+    max-width: 450px;
     border-radius: 10px;
-    padding: 3rem 1rem 3rem 3rem;
+    max-height: 80vh;
 }
 .sobre-mim {
     flex: 2;
-    margin-left: 2em;
     align-self: center;
-    width: 60%;
+    margin-left: 2em;
 }
 .sobre-mim-titulo,
 .sobre-mim-descricao {
     font-family: 'Abel', sans-serif;
-    text-align: justify;
 }
 .sobre-mim-titulo {
     font-size: 3em;
@@ -135,6 +137,7 @@ section:nth-child(2) {
 }
 .sobre-mim-descricao {
     font-size: 1.2em;
+    text-align: justify;
 }
 section:nth-child(3) {
     background: purple;

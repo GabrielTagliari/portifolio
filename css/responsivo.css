@@ -11,36 +11,50 @@
         flex-flow: column wrap;
     }
     .minha-foto {
-        align-self: center;
+        max-width: 300px;
+        max-height: 30vh;
         padding: 0;
     }
     .sobre-mim {
-        overflow: auto;
         margin-left: 0;
         margin-top: 1em;
+        max-height: 60vh;
     }
     .sobre-mim-titulo {
-        font-size: 1.5em;
+        text-align: center;
+        font-size: 2.5em;
     }
     .sobre-mim-descricao {
+        overflow: auto;
         font-size: 1em;
     }
 }
 @media all and (max-width: 550px){
     .minha-foto {
-        width: 145px;
-        height: 165px;
+        max-width: 200px;
+    }
+    .sobre-mim-titulo {
+        font-size: 1.5em;
     }
 }
 @media all and (max-width: 320px){
-    .sobre-mim-titulo {
-        font-size: 1.5em;
+    .minha-foto {
+        max-width: 150px;
     }
     .sobre-mim-descricao {
         font-size: 1em;
     }
 }
 @media all and (max-width: 400px){
+    .minha-foto {
+        max-width: 100px;
+    }
+    .sobre-mim-titulo {
+        font-size: 1em;
+    }
+    .sobre-mim-descricao {
+        font-size: .8em;
+    }
     .nome {
         font-size: 2em;
     }
@@ -49,16 +63,5 @@
     }
     .botao {
         width: 150px;
-    }
-}
-@media all and (max-width: 320px){
-    .sobre-mim {
-        margin-top: 1em;
-    }
-    .sobre-mim-titulo {
-        font-size: 1em;
-    }
-    .sobre-mim-descricao {
-        font-size: .8em;
     }
 }
