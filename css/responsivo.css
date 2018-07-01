@@ -28,6 +28,20 @@
         overflow: auto;
         font-size: 1em;
     }
+    .icones-redes-sociais a {
+        width: 3em;
+        height: 3em;
+    }
+    .icones-redes-sociais > li::before {
+        width: 5em;
+        height: 5em;
+    }
+    section:last-of-type h1 {
+        font-size: 2em;
+    }
+    .whatsapp-box img {
+        width: 3.5em;
+    }
 }
 @media all and (max-width: 550px){
     .minha-foto {
@@ -36,13 +50,8 @@
     .sobre-mim-titulo {
         font-size: 1.5em;
     }
-}
-@media all and (max-width: 320px){
-    .minha-foto {
-        max-width: 150px;
-    }
-    .sobre-mim-descricao {
-        font-size: 1em;
+    section:last-of-type {
+        height: 100vh;
     }
 }
 @media all and (max-width: 400px){
@@ -57,5 +66,21 @@
     }
     .botao {
         width: 150px;
+    }
+    .nome-whatsapp {
+        font-size: 1em;
+    }
+}
+@media all and (max-width: 320px){
+    .minha-foto {
+        max-width: 150px;
+    }
+    .sobre-mim-descricao {
+        font-size: 1em;
+    }
+}
+@media all and (max-width: 200px){
+    .whatsapp-box img {
+        width: 2em;
     }
 }
