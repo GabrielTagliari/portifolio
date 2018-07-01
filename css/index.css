@@ -150,7 +150,8 @@ section:last-of-type {
     height: 50vh;
     background-color: #272725;
 }
-section:last-of-type h1 {
+section:last-of-type h1,
+section:nth-child(3) h1 {
     font-size: 3em;
     text-transform: uppercase;
     color: white;

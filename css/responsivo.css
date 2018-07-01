@@ -53,6 +53,12 @@
     section:last-of-type {
         height: 100vh;
     }
+    .contatos-box {
+        height: 50%;
+    }
+    .nome-whatsapp {
+        font-size: 1em;
+    }
 }
 @media all and (max-width: 400px){
     .sobre-mim-titulo {
