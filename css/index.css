@@ -5,20 +5,24 @@ html, body {
 section {
     height: 100vh;
 }
-.avancar {
+.titulo-section {
+    font-family: 'Abel', sans-serif;
+    font-size: 3em;
+    padding-top: 1em;
     position: relative;
-    bottom: .5em;
-    left:50%;
-    width: 1em;
-    height: 1em;
-    border-bottom: .5em solid #000000;
-    border-left: .5em solid #000000;
-    transform: translate(-50%, -50%) rotate(-45deg);
-    -webkit-animation: sobe-desce 1s infinite;
-    animation: sobe-desce 1s infinite;
-    animation-direction: alternate;
-    animation-timing-function: ease-in-out;
+    text-align: center;
+    text-transform: uppercase;
 }
+.branco {
+    color: white;
+}
+.conteudo {
+    left: 50%;
+    position: relative;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+/* Seção home */
 section:nth-child(1) {
     background: url(../img/fundo.jpg);
     background-repeat: no-repeat;
@@ -33,12 +37,8 @@ section:nth-child(1) {
     ),
     url(../img/fundo.jpg);
 }
-.inicio {
-    position: relative;
+.conteudo-home {
     color: white;
-    top: 45%;
-    left: 50%;
-    transform: translate(-50%, -50%);
     font-family: 'Poiret One', cursive;
     text-align: center;
     padding: 0 1em 0 1em;
@@ -98,19 +98,24 @@ section:nth-child(1) {
     transform: scale(1, .1);
     opacity: 0;
 }
+
+/* Seção Sobre Mim */
 section:nth-child(2) {
-    background: rgb(250, 250, 250);
+    background: rgb(252, 252, 252);
 }
-.container {
-    position: relative;
+.conteudo-sobre-mim {
     display: flex;
     flex-flow: row wrap;
+    justify-content: space-around;
     width: 100%;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
     box-sizing: border-box;
     padding: 0 2em 0 2em;
+}
+.conteudo-sobre-mim .trabalho {
+    margin: 2em;
+    width: 20em;
+    height: 20em;
+    background-color: white;
 }
 .imagem {
     flex: 1;
@@ -139,38 +144,51 @@ section:nth-child(2) {
     font-size: 1.5em;
     text-align: justify;
 }
+
+/* Seção Portifolio */
 section:nth-child(3) {
-    background-color: #272725;
+    background-color: rgb(252, 252, 252);
 }
+.conteudo-portifolio {
+    display: flex;
+    flex-flow: row wrap;
+    box-sizing: border-box;
+    justify-content: center;
+}
+.trabalho {
+    position: relative;
+    width: 30em;
+    height: 20em;
+    background-color: white;
+    margin: 2em;
+}
+.trabalho > img {
+    width: 80%;
+    height: 80%;
+    left: 50%;
+    position: relative;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+/* Seção Tecnologias */
 section:nth-child(4) {
-    background: rgb(250, 250, 250);
+    background: rgb(252, 252, 252);
 }
+
+/* Seção Contatos */
 section:last-of-type {
     position: relative;
     height: 50vh;
     background-color: #272725;
 }
-section:last-of-type h1,
-section:nth-child(3) h1 {
-    font-size: 3em;
-    text-transform: uppercase;
-    color: white;
-    font-weight: bold;
-    position: relative;
-    text-align: center;
-    padding-top: 1em;
-    font-family: 'Abel', sans-serif;
-}
-.contatos-box {
+.conteudo-contatos {
     display: flex;
     flex-flow: row wrap;
     align-items: center;
     justify-content: space-around;
     position: absolute;
     width: 90%;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
 }
 .whatsapp-box {
     display: flex;
@@ -232,3 +250,19 @@ section:nth-child(3) h1 {
 .linkedin {
     background-image: url(../img/linkedin.svg);
 }
+
+/* Elemento para passar para próxima seção */
+/* .avancar {
+    position: relative;
+    bottom: .5em;
+    left:50%;
+    width: 1em;
+    height: 1em;
+    border-bottom: .5em solid #000000;
+    border-left: .5em solid #000000;
+    transform: translate(-50%, -50%) rotate(-45deg);
+    -webkit-animation: sobe-desce 1s infinite;
+    animation: sobe-desce 1s infinite;
+    animation-direction: alternate;
+    animation-timing-function: ease-in-out;
+} */

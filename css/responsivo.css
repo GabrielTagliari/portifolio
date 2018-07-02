@@ -7,7 +7,7 @@
     transition: .5s;
 }
 @media all and (max-width: 950px){
-    .container {
+    .conteudo-sobre-mim {
         flex-flow: column wrap;
     }
     .minha-foto {
@@ -53,7 +53,7 @@
     section:last-of-type {
         height: 100vh;
     }
-    .contatos-box {
+    .conteudo-contatos {
         height: 50%;
     }
     .nome-whatsapp {
