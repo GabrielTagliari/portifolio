@@ -100,9 +100,9 @@ section:nth-child(1) {
 }
 
 /* Seção Sobre Mim */
-section:nth-child(2) {
-    background: rgb(252, 252, 252);
-}
+/* section:nth-child(2) {
+    background: rgb(255, 255, 255);
+} */
 .conteudo-sobre-mim {
     display: flex;
     flex-flow: row wrap;
@@ -111,7 +111,7 @@ section:nth-child(2) {
     box-sizing: border-box;
     padding: 0 2em 0 2em;
 }
-.conteudo-sobre-mim .trabalho {
+.conteudo-sobre-mim .projeto {
     margin: 2em;
     width: 20em;
     height: 20em;
@@ -147,34 +147,37 @@ section:nth-child(2) {
 
 /* Seção Portifolio */
 section:nth-child(3) {
-    background-color: rgb(252, 252, 252);
+    position: relative;
 }
 .conteudo-portifolio {
+    position: absolute;
     display: flex;
     flex-flow: row wrap;
     box-sizing: border-box;
     justify-content: center;
+    width: 100%;
 }
-.trabalho {
+.projeto {
     position: relative;
-    width: 30em;
-    height: 20em;
-    background-color: white;
+    width: 25vw;
+    height: 25vw;
     margin: 2em;
+    border: 2px solid black;
 }
-.trabalho > img {
-    width: 80%;
-    height: 80%;
+.projeto > img {
+    width: 70%;
     left: 50%;
     position: relative;
     top: 50%;
     transform: translate(-50%, -50%);
 }
-
-/* Seção Tecnologias */
-section:nth-child(4) {
-    background: rgb(252, 252, 252);
+.projeto .descricao {
+    display: none;
 }
+/* Seção Tecnologias */
+/* section:nth-child(4) {
+    background: rgb(252, 252, 252);
+} */
 
 /* Seção Contatos */
 section:last-of-type {
