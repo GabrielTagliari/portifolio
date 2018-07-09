@@ -40,10 +40,6 @@
     .whatsapp-box img {
         width: 3.5em;
     }
-    .conteudo-portifolio {
-        flex-direction: column;
-        width: 100%;
-    }
 }
 @media all and (max-width: 550px){
     .minha-foto {
@@ -61,6 +57,14 @@
     }
     .nome-whatsapp {
         font-size: 1em;
+    }
+    .conteudo-portifolio {
+        flex-direction: column;
+        width: 50%;
+    }
+    .projeto {
+        width: 40vw;
+        height: 40vw;
     }
 }
 @media all and (max-width: 400px){

@@ -150,30 +150,54 @@ section:nth-child(3) {
     position: relative;
 }
 .conteudo-portifolio {
-    position: absolute;
+    position: relative;
     display: flex;
     flex-flow: row wrap;
     box-sizing: border-box;
     justify-content: center;
     width: 100%;
+    perspective: 1000;
 }
 .projeto {
     position: relative;
-    width: 25vw;
-    height: 25vw;
+    align-self: center;
+    width: 30vw;
+    height: 30vw;
     margin: 2em;
-    border: 2px solid black;
-}
-.projeto > img {
-    width: 70%;
-    left: 50%;
-    position: relative;
-    top: 50%;
-    transform: translate(-50%, -50%);
+    border: 1px solid black;
+    transition: 0.6s;
+    transform-style: preserve-3d;
 }
 .projeto .descricao {
-    display: none;
+    color: white;
 }
+.frente > img {
+    width: 70%;
+    height: auto;
+}
+.projeto:hover, .projeto.hover {  		
+    transform: rotateY(180deg);
+}
+.frente {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 2;
+}
+.frente, .verso {  	
+    backface-visibility: hidden;
+    background-color: white;
+    width: inherit;
+    height: inherit;
+    left: 0;
+    position: absolute;
+    top: 0;
+}
+.verso {
+    background-color: #272725;
+    transform: rotateY(180deg);
+}
+
 /* Seção Tecnologias */
 /* section:nth-child(4) {
     background: rgb(252, 252, 252);
@@ -253,19 +277,3 @@ section:last-of-type {
 .linkedin {
     background-image: url(../img/linkedin.svg);
 }
-
-/* Elemento para passar para próxima seção */
-/* .avancar {
-    position: relative;
-    bottom: .5em;
-    left:50%;
-    width: 1em;
-    height: 1em;
-    border-bottom: .5em solid #000000;
-    border-left: .5em solid #000000;
-    transform: translate(-50%, -50%) rotate(-45deg);
-    -webkit-animation: sobe-desce 1s infinite;
-    animation: sobe-desce 1s infinite;
-    animation-direction: alternate;
-    animation-timing-function: ease-in-out;
-} */
