@@ -67,7 +67,7 @@
         height: 40vw;
     }
 }
-@media all and (max-width: 400px){
+@media all and (max-width: 400px), (max-height: 400px){
     .sobre-mim-titulo,
     .titulo-section {
         font-size: 1em;
