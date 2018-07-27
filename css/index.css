@@ -151,17 +151,13 @@ section:nth-child(3) {
     background-color: #f2f2f2;
 }
 .conteudo-portifolio {
-    height: 100%;
-    display: -webkit-box;
-    display: -moz-box;
-    display: -ms-flexbox;
-    display: -webkit-flex;
     display: flex;
     align-items: center;
     justify-content: center;
     flex-flow: row wrap;
     box-sizing: border-box;
     width: 100%;
+    min-height: 70vh;
 }
 .projeto {
     clear: both;
@@ -179,14 +175,15 @@ section:nth-child(3) {
     height: 30%;
     text-align: center;
     position: relative;
+    vertical-align: middle;
 }
-.projeto .descricao .titulo,
+/* .projeto .descricao .titulo,
 .projeto .descricao .texto {
     left: 50%;
     position: relative;
     top: 50%;
     transform: translate(-50%, -50%);
-} 
+}  */
 .projeto > img {
     width: 100%;
     height: 70%;
@@ -201,7 +198,7 @@ section:nth-child(3) {
 /* Seção Contatos */
 section:last-of-type {
     position: relative;
-    height: 50vh;
+    min-height: 50vh;
     background-color: #272725;
 }
 .conteudo-contatos {
