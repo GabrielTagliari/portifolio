@@ -58,13 +58,12 @@
         font-size: 1em;
     }
     .projeto {
-        width: 100%;
+        width: 90%;
         margin: 1em 0 1em 0;
     }
 }
 @media all and (max-width: 400px), (max-height: 400px){
-    .sobre-mim-titulo,
-    .titulo-section {
+    .sobre-mim-titulo {
         font-size: 1em;
     }
     .nome {
