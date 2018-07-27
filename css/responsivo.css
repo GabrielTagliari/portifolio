@@ -6,11 +6,6 @@
     top: 0;
     transition: .5s;
 }
-/* @media all and (max-width: 1065px){
-    section:nth-child(3) {
-        height: 200vh;
-    }
-} */
 @media all and (max-width: 950px){
     .conteudo-sobre-mim {
         flex-flow: column wrap;
@@ -44,6 +39,9 @@
     .whatsapp-box img {
         width: 3.5em;
     }
+    .conteudo-portifolio {
+        padding-bottom: 3em;
+    }
 }
 @media all and (max-width: 550px){
     .minha-foto {
@@ -53,14 +51,15 @@
     .titulo-section {
         font-size: 1.5em;
     }
-    section:last-of-type {
-        height: 100vh;
-    }
     .conteudo-contatos {
         height: 50%;
     }
     .nome-whatsapp {
         font-size: 1em;
+    }
+    .projeto {
+        width: 100%;
+        margin: 1em 0 1em 0;
     }
 }
 @media all and (max-width: 400px), (max-height: 400px){
