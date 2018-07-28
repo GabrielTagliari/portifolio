@@ -187,16 +187,22 @@ section:nth-child(3) {
     padding: .5em;
     text-transform: uppercase;
 }
+.projeto .descricao .titulo {
+    font-size: 1.3em;
+}
 .projeto .imagem {
     width: 100%;
     height: 70%;
-    background-color: #272725;
     position: relative;
 }
+.projeto:nth-of-type(1) .imagem {
+    background-color: #272725;
+}
+.projeto:nth-of-type(2) .imagem {
+    background-color: #C62C34;
+}
 .projeto .imagem > img {
-    width: 60%;
-    height: 60%;
-    left: 50%;
+    height: 50%;
     position: absolute;
     top: 50%;
     transform: translate(-50%, -50%);
