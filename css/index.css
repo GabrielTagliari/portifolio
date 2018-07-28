@@ -221,8 +221,6 @@ section:last-of-type {
     flex-flow: row wrap;
     align-items: center;
     justify-content: space-around;
-    position: absolute;
-    width: 90%;
 }
 .icones-redes-sociais {
     display: flex;
