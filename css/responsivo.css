@@ -47,10 +47,6 @@
     .minha-foto {
         max-width: 200px;
     }
-    .sobre-mim-titulo,
-    .titulo-section {
-        font-size: 1.5em;
-    }
     .conteudo-contatos {
         height: 50%;
     }
@@ -63,8 +59,9 @@
     }
 }
 @media all and (max-width: 400px), (max-height: 400px){
-    .sobre-mim-titulo {
-        font-size: 1em;
+    .sobre-mim-titulo,
+    .titulo-section {
+        font-size: 1.5em;
     }
     .nome {
         font-size: 2em;
