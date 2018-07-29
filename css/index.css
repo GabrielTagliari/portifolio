@@ -17,9 +17,10 @@ section {
     color: white;
 }
 .conteudo-centralizado {
-    display: flex;
-    flex-flow: column nowrap;
-    justify-content: center;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
 }
 /* Seção home */
 section:nth-child(1) {
@@ -102,6 +103,10 @@ section:nth-child(2) {
     position: relative;
 }
 .conteudo-sobre-mim {
+    display: -webkit-box; 
+    display: -moz-box;  
+    display: -ms-flexbox; 
+    display: -webkit-flex; 
     display: flex;
     flex-flow: row wrap;
     justify-content: space-around;
@@ -111,7 +116,6 @@ section:nth-child(2) {
 }
 .imagem {
     flex: 1;
-    text-align: center;
 }
 .minha-foto {
     max-width: 450px;
@@ -143,6 +147,10 @@ section:nth-child(3) {
     background-color: #f2f2f2;
 }
 .conteudo-portifolio {
+    display: -webkit-box; 
+    display: -moz-box;  
+    display: -ms-flexbox; 
+    display: -webkit-flex; 
     display: flex;
     align-items: center;
     justify-content: center;
@@ -162,6 +170,10 @@ section:nth-child(3) {
     background-color: white;
 }
 .projeto .descricao {
+    display: -webkit-box; 
+    display: -moz-box;  
+    display: -ms-flexbox; 
+    display: -webkit-flex; 
     display: flex;
     flex-flow: column nowrap;
     text-align: center;
@@ -196,6 +208,7 @@ section:nth-child(3) {
 .projeto .imagem > img {
     height: 50%;
     position: absolute;
+    left: 50%;
     top: 50%;
     transform: translate(-50%, -50%);
 }
@@ -214,6 +227,10 @@ section:last-of-type {
     background-color: #272725;
 }
 .conteudo-contatos {
+    display: -webkit-box; 
+    display: -moz-box;  
+    display: -ms-flexbox; 
+    display: -webkit-flex; 
     display: flex;
     flex-flow: row wrap;
     align-items: center;
@@ -221,6 +238,10 @@ section:last-of-type {
     padding-bottom: 1.5rem;
 }
 .icones-redes-sociais {
+    display: -webkit-box; 
+    display: -moz-box;  
+    display: -ms-flexbox; 
+    display: -webkit-flex; 
     display: flex;
     flex-flow: row wrap;
     position: relative;
@@ -322,11 +343,15 @@ section:last-of-type {
     text-align: justify;
 }
 .imagens-grid {
-    height: 50vh;
 }
 .imagens-grid,
 .tecnologias-utilizadas {
+    display: -webkit-box; 
+    display: -moz-box;  
+    display: -ms-flexbox; 
+    display: -webkit-flex; 
     display: flex;
+    flex-flow: row wrap;
     position: relative;
     justify-content: center;
     width: auto;
@@ -336,8 +361,9 @@ section:last-of-type {
     padding: 0 .5em 0 .5em;
 }
 .imagens-grid div img {
-    max-width: 100%;
-    max-height: 100%;
+    width: auto;
+    max-width: 40vw;
+    max-height: 50vh;
 }
 .tecnologias-utilizadas div img {
     width: 2em;
