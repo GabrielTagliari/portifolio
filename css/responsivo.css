@@ -42,6 +42,9 @@
     .conteudo-portifolio {
         padding-bottom: 3em;
     }
+    .modal > div {
+        width: 95vw;
+    }
 }
 @media all and (max-width: 550px){
     .minha-foto {

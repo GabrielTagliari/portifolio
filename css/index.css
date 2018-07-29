@@ -8,7 +8,7 @@ section {
 .titulo-section {
     font-family: 'Abel', sans-serif;
     font-size: 3em;
-    padding: 1em 0 1em 0;
+    padding: 2.5rem 0 2.5rem 0;
     position: relative;
     text-align: center;
     text-transform: uppercase;
@@ -209,11 +209,10 @@ section:nth-child(3) {
 /* section:nth-child(4) {
     background: rgb(252, 252, 252);
 } */
-
 /* Seção Contatos */
 section:last-of-type {
     position: relative;
-    min-height: 50vh;
+    min-height: 0;
     background-color: #272725;
 }
 .conteudo-contatos {
@@ -221,6 +220,7 @@ section:last-of-type {
     flex-flow: row wrap;
     align-items: center;
     justify-content: space-around;
+    padding-bottom: 2.5rem;
 }
 .icones-redes-sociais {
     display: flex;
@@ -260,4 +260,94 @@ section:last-of-type {
 }
 .linkedin {
     background-image: url(../img/linkedin.svg);
+}
+/* Modal */
+.modal {
+	position: fixed;
+	font-family: Arial, Helvetica, sans-serif;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	background: rgba(0,0,0,0.7);
+	z-index: 99999;
+	opacity:0;
+	-webkit-transition: opacity 300ms ease-in;
+	-moz-transition: opacity 300ms ease-in;
+	transition: opacity 300ms ease-in;
+	pointer-events: none;
+}
+.modal:target {
+	opacity:1;
+	pointer-events: auto;
+}
+.modal > div {
+    width: 70vw;
+    height: 95vh;
+    position: absolute;
+	padding: 2em;
+    border-radius: 5px;
+    box-sizing: border-box;
+    background: #fff;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.fechar {
+	color: black;
+	line-height: 25px;
+	position: absolute;
+	right: 0;
+	text-align: center;
+	top: 0;
+    width: 24px;
+    margin: 1em;
+	text-decoration: none;
+	font-weight: bold;
+}
+.fechar:hover {
+    background: black;
+    color: white;
+}
+.modal h2 {
+    font-size: 1.3em;
+    font-weight: bold;
+    text-transform: uppercase;
+    padding: 1em;
+}
+.modal h2,
+.modal p {
+    font-family: 'Abel', sans-serif;
+    text-align: center;
+}
+.modal p {
+    text-align: justify;
+}
+.imagens-grid {
+    height: 50vh;
+}
+.imagens-grid,
+.tecnologias-utilizadas {
+    display: flex;
+    position: relative;
+    justify-content: center;
+    width: auto;
+}
+.imagens-grid > div,
+.tecnologias-utilizadas > div {
+    padding: 0 .5em 0 .5em;
+}
+.imagens-grid div img {
+    max-width: 100%;
+    max-height: 100%;
+}
+.tecnologias-utilizadas div img {
+    width: 2em;
+    height: 2em;
+}
+/* Modal InfoBeacons */
+#infobeacons > div:nth-of-type(1),
+#q8rn > div:nth-of-type(1) {
+    position: relative;
+    overflow: auto;
 }

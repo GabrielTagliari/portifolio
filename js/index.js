@@ -25,3 +25,8 @@ $('.navegacao, .me-conheca').click(function() {
     }, 1000);
 });
 
+$(document).on('keyup',function(evt) {
+    if (evt.keyCode == 27) {
+        location.href="#fechar";
+    }   
+});
