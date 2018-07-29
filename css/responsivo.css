@@ -58,14 +58,6 @@
     .botao {
         width: 150px;
     }
-    .icones-redes-sociais a {
-        width: 1em;
-        height: 1em;
-    }
-    .icones-redes-sociais > li::before {
-        width: 3em;
-        height: 3em;
-    }
     .projeto {
         width: 80vw;
         height: 60vw;
