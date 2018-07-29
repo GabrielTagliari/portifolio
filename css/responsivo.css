@@ -43,6 +43,10 @@
         width: 90%;
         margin: 1em 0 1em 0;
     }
+    .imagens-grid div img {
+        max-width: 40vw;
+        max-height: 40vh;
+    }
 }
 @media all and (max-width: 400px), (max-height: 400px){
     .sobre-mim-titulo,
@@ -73,6 +77,10 @@
     }
     .rodape {
         font-size: .4em;
+    }
+    .imagens-grid div img {
+        max-width: 30vw;
+        max-height: 30vh;
     }
 }
 @media all and (max-width: 320px){
