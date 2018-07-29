@@ -85,7 +85,7 @@
 }
 @media all and (max-width: 320px){
     .minha-foto {
-        max-width: 150px;
+        max-width: 70vw;
     }
     .sobre-mim-descricao {
         font-size: 1em;
