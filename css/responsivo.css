@@ -28,17 +28,6 @@
     .sobre-mim-descricao {
         font-size: 1em;
     }
-    .icones-redes-sociais a {
-        width: 3em;
-        height: 3em;
-    }
-    .icones-redes-sociais > li::before {
-        width: 5em;
-        height: 5em;
-    }
-    .whatsapp-box img {
-        width: 3.5em;
-    }
     .conteudo-portifolio {
         padding-bottom: 3em;
     }
@@ -49,12 +38,6 @@
 @media all and (max-width: 550px){
     .minha-foto {
         max-width: 200px;
-    }
-    .conteudo-contatos {
-        height: 50%;
-    }
-    .nome-whatsapp {
-        font-size: 1em;
     }
     .projeto {
         width: 90%;
@@ -75,8 +58,29 @@
     .botao {
         width: 150px;
     }
-    .nome-whatsapp {
-        font-size: 1em;
+    .icones-redes-sociais a {
+        width: 1em;
+        height: 1em;
+    }
+    .icones-redes-sociais > li::before {
+        width: 3em;
+        height: 3em;
+    }
+    .projeto {
+        width: 80vw;
+        height: 60vw;
+    }
+    .projeto .descricao {
+        padding-top: .8em;
+    }
+    .projeto .descricao .titulo {
+        font-size: .5em;
+    }
+    .projeto .descricao .texto {
+        font-size: .4em;
+    }
+    .rodape {
+        font-size: .4em;
     }
 }
 @media all and (max-width: 320px){
@@ -85,10 +89,5 @@
     }
     .sobre-mim-descricao {
         font-size: 1em;
-    }
-}
-@media all and (max-width: 200px){
-    .whatsapp-box img {
-        width: 2em;
     }
 }

@@ -8,7 +8,7 @@ section {
 .titulo-section {
     font-family: 'Abel', sans-serif;
     font-size: 3em;
-    padding: 2.5rem 0 2.5rem 0;
+    padding: 1.5rem 0 1.5rem 0;
     position: relative;
     text-align: center;
     text-transform: uppercase;
@@ -168,7 +168,7 @@ section:nth-child(3) {
     flex-flow: column nowrap;
     text-align: center;
     width: 100%;
-    height: 30%;
+    max-height: 30%;
     position: relative;
     padding-top: 1.2em;
 }
@@ -220,7 +220,7 @@ section:last-of-type {
     flex-flow: row wrap;
     align-items: center;
     justify-content: space-around;
-    padding-bottom: 2.5rem;
+    padding-bottom: 1.5rem;
 }
 .icones-redes-sociais {
     display: flex;
@@ -230,8 +230,8 @@ section:last-of-type {
 }
 .icones-redes-sociais a {
     margin: 1em;
-    width: 5em;
-    height: 5em;
+    width: 2em;
+    height: 2em;
     display: block;
     text-indent: -99999px;
     position: relative;
@@ -241,8 +241,8 @@ section:last-of-type {
     content: '';
     display: block;
     position: absolute;
-    width: 7em;
-    height: 7em;
+    width: 4em;
+    height: 4em;
     -moz-border-radius: 50%;
     -webkit-border-radius: 50%;
     border-radius: 50%;
