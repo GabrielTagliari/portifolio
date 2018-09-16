@@ -1,0 +1,86 @@
+/* Seção home */
+section:nth-child(1) {
+    background-repeat: no-repeat;
+    background-position: center center;
+    @include background-size(cover);
+    background-image: 
+    linear-gradient(
+    rgba(0, 0, 0, 0.4),
+    rgba(0, 0, 0, 0.4)
+    ),
+    url(../img/fundo.jpg);
+}
+.conteudo-home {
+    @extend %cor-branca;
+    font-family: 'Poiret One', cursive;
+    text-align: center;
+    @extend %centralizado;
+}
+.nome {
+    font-size: 3em;
+    text-transform: uppercase;
+    transform: scale(1, 1.2);
+    @media (max-width: 400px), (max-height: 400px) {
+        font-size: 2em;
+    }
+}
+.funcao {
+    font-size: 2em;
+    margin: .8em 0 2em 0;
+    @media (max-width: 400px), (max-height: 400px) {
+        font-size: 1em;
+    }
+}
+.botao {
+    position: relative;
+    color: $cor-botao;
+    width: 256px;
+    font-weight: bold;
+    height: 64px;
+    line-height: 64px;
+    transition: all 0.3s;
+    margin-left: 50%;
+    transform: translate(-50%);
+    @media (max-width: 400px), (max-height: 400px) {
+        width: 150px;
+    }
+    a {
+        text-decoration: none;
+        color: $cor-botao;
+        text-transform: uppercase;
+    }
+    &::before, 
+    &::after {
+        content: '';
+        position: absolute;
+        transition: all 0.3s;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: 1;
+    }
+}
+.me-conheca {
+    &::before {
+        opacity: 0;
+        background: rgba(230, 122, 122, 0.1);
+        transform: scale(1, 0.1);
+        @include border-radius(60px);
+    }
+    &::after {
+        transition: all 0.3s;
+        border: 2px solid $cor-botao;
+        @include border-radius(60px);
+    }
+    &:hover::before {
+        opacity: 1;
+        transform: scale(1, 1);
+        cursor: pointer;
+    }
+    &:hover::after {
+        transform: scale(1, .1);
+        opacity: 0;
+        cursor: pointer;
+    }
+}

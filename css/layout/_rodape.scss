@@ -1,0 +1,15 @@
+.rodape {
+    position: relative;
+    font-size: .8em;
+    @extend %cor-branca;
+    background-color: $cor-tema;
+    padding: 1em 0 1em 0;
+    width: 100%;
+    height: 1em;
+    text-align: center;
+    bottom: 0;
+    font-family: 'Poiret One', cursive;
+    @media (max-width: 400px), (max-height: 400px) {
+        font-size: .4em;
+    }
+}

@@ -1,0 +1,130 @@
+/* Modal */
+.modal {
+	position: fixed;
+	font-family: Arial, Helvetica, sans-serif;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	background: rgba(0,0,0,0.7);
+	z-index: 99999;
+	opacity:0;
+	-webkit-transition: opacity 300ms ease-in;
+	-moz-transition: opacity 300ms ease-in;
+	transition: opacity 300ms ease-in;
+    pointer-events: none;
+    &:target {
+        opacity:1;
+        pointer-events: auto;
+    }
+    & > div {
+        width: 70vw;
+        height: 95vh;
+        padding: 2em;
+        @include border-radius(5px);
+        box-sizing: border-box;
+        background: #fff;
+        @extend %centralizado;
+        @media (max-width: 950px) {
+            width: 95vw;
+        }
+    }
+}
+.fechar {
+	color: black;
+	line-height: 25px;
+	position: absolute;
+	right: 0;
+	text-align: center;
+	top: 0;
+    width: 24px;
+    margin: 1em;
+	text-decoration: none;
+    font-weight: bold;
+    &:hover {
+        background: black;
+        @extend %cor-branca;
+    }
+}
+.modal {
+    h2 {
+        font-size: 1.3em;
+        font-weight: bold;
+        text-transform: uppercase;
+        padding: 1em;
+        text-align: center;
+    }
+    p {
+        text-align: justify;
+    }
+    h2, p {
+        @extend %fonte-titulo;
+    }
+}
+.imagens-grid,
+.tecnologias-utilizadas {
+    @include display-flex;
+    flex-flow: row wrap;
+    position: relative;
+    justify-content: center;
+    width: auto;
+    & > div {
+        padding: 0 .5em 0 .5em;
+    }
+}
+.imagens-grid {
+    @media (max-width: 550px) {
+        max-width: 40vw;
+        max-height: 40vh;
+    }
+    div img {
+        width: auto;
+        max-width: 40vw;
+        max-height: 50vh;
+        @media (max-width: 400px), (max-height: 400px) {
+            max-width: 30vw;
+            max-height: 30vh;
+        }
+    }
+}
+@include all-tecnologias-sprites;
+.tecnologias-utilizadas {
+    div {
+        width: 2em;
+        height: 2em;
+    }
+    .tecnologias-android, .tecnologias-bluetooth, .tecnologias-database, .tecnologias-ibeacon {
+        @include background-size(cover);
+    }
+    .tecnologias-ibeacon {
+        background-position: 0 -96px;
+    }
+    .tecnologias-bluetooth {
+        background-position: 0 -32px;
+    }
+    .tecnologias-database {
+        background-position: 0 -64px;
+    }
+    div:hover + .tooltiptext {
+        visibility: visible;
+    }
+}
+/* Modal InfoBeacons */
+#infobeacons > div:nth-of-type(1),
+#q8rn > div:nth-of-type(1) {
+    position: relative;
+    overflow: auto;
+}
+/* Tooltips */
+.tooltiptext {
+    visibility: hidden;
+    width: 120px;
+    background-color: black;
+    color: #fff;
+    text-align: center;
+    @include border-radius(6px);
+    padding: 5px 0;
+    position: absolute;
+    z-index: 1;
+    margin-top: .5em;
+}

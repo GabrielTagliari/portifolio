@@ -1,0 +1,49 @@
+/* Seção Contatos */
+section:last-of-type {
+    position: relative;
+    min-height: 0;
+    background-color: $cor-tema;
+}
+#quinta .titulo-section {
+    @extend %cor-branca;
+}
+.conteudo-contatos {
+    @include display-flex;
+    flex-flow: row wrap;
+    align-items: center;
+    justify-content: space-around;
+    padding-bottom: 1.5rem;
+}
+@include all-icones-sociais-sprites;
+.icones-redes-sociais {
+    @include display-flex;
+    flex-flow: row wrap;
+    position: relative;
+    justify-content: space-around;
+    a {
+        margin: 1em;
+        width: 2em;
+        height: 2em;
+        display: block;
+        text-indent: -99999px;
+        position: relative;
+        background-size: 100%;
+    }
+    li::before {
+        content: '';
+        display: block;
+        position: absolute;
+        width: 4em;
+        height: 4em;
+        @include border-radius(50%);
+        border: 1px solid black;
+        background-color: white;
+        transform: scale(.7);
+    }
+}
+.icones-sociais-instagram {
+    background-position: 1px -32px;
+}
+.icones-sociais-linkedin {
+    background-position: 1px -66px;
+}

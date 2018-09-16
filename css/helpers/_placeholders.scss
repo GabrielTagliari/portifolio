@@ -1,0 +1,17 @@
+@import 'compass/css3';
+@import 'compass/utilities';
+
+%fonte-titulo {
+    font-family: 'Abel', sans-serif;
+}
+
+%centralizado {
+    left: 50%;
+    position: absolute;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+%cor-branca {
+    color: #fff;
+}
