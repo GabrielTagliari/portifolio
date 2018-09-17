@@ -64,7 +64,7 @@
 .imagens-grid,
 .tecnologias-utilizadas {
     @include display-flex;
-    flex-flow: row wrap;
+    flex-flow: row nowrap;
     position: relative;
     justify-content: center;
     width: auto;
@@ -73,10 +73,6 @@
     }
 }
 .imagens-grid {
-    @media (max-width: 550px) {
-        max-width: 40vw;
-        max-height: 40vh;
-    }
     div img {
         width: auto;
         max-width: 40vw;

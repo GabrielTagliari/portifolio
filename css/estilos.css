@@ -599,7 +599,7 @@ section:last-of-type {
 .tecnologias-utilizadas {
   display: -webkit-flex;
   display: flex;
-  flex-flow: row wrap;
+  flex-flow: row nowrap;
   position: relative;
   justify-content: center;
   width: auto;
@@ -609,12 +609,6 @@ section:last-of-type {
   padding: 0 .5em 0 .5em;
 }
 
-@media (max-width: 550px) {
-  .imagens-grid {
-    max-width: 40vw;
-    max-height: 40vh;
-  }
-}
 .imagens-grid div img {
   width: auto;
   max-width: 40vw;
