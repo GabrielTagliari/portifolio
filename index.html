@@ -1,197 +1,762 @@
 <!DOCTYPE html>
-<html>
+<html lang="pt-BR">
 <head>
-    <!-- Global site tag (gtag.js) - Google Analytics -->
-    <!-- <script async src="https://www.googletagmanager.com/gtag/js?id=UA-123487029-1"></script>
-    <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
-        gtag('js', new Date());
-
-        gtag('config', 'UA-123487029-1');
-    </script> -->
-
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="theme-color" content="#272725" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-
-    <!-- Style -->
-    <link rel="stylesheet" href="css/estilos.css">
-
-    <title>Gabriel Tagliari Rodrigo</title>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Gabriel Tagliari Rodrigo — Líder de Engenharia</title>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=JetBrains+Mono:wght@300;400;500&display=swap" rel="stylesheet" />
+<script src="https://unpkg.com/react@18.3.1/umd/react.development.js" integrity="sha384-hD6/rw4ppMLGNu3tX5cjIb+uRZ7UkRJ6BPkLpg4hAu/6onKUg4lLsHAs9EBPT82L" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js" integrity="sha384-u6aeetuaXnQ38mYT8rp6sbXaQe3NL9t+IBXmnYxwkUI2Hw4bsp2Wvmx4yRQF1uAm" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/@babel/standalone@7.29.0/babel.min.js" integrity="sha384-m08KidiNqLdpJqLq95G/LEi8Qvjl/xUYll3QILypMoQ65QorJ9Lvtp2RXYGBFj1y" crossorigin="anonymous"></script>
+<style>
+  :root {
+    --bg: #07070a;
+    --surface: #0e0e15;
+    --surface2: #141420;
+    --border: #1e1e2e;
+    --text: #ede9e0;
+    --muted: #5a5770;
+    --muted2: #3a3850;
+    --accent: #f97316;
+    --accent-dim: rgba(249,115,22,0.12);
+    --accent-glow: rgba(249,115,22,0.35);
+    --font-head: 'Space Grotesk', sans-serif;
+    --font-mono: 'JetBrains Mono', monospace;
+  }
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; }
+  body {
+    background: var(--bg);
+    color: var(--text);
+    font-family: var(--font-head);
+    overflow-x: hidden;
+    cursor: default;
+  }
+  ::selection { background: var(--accent); color: #000; }
+  ::-webkit-scrollbar { width: 4px; }
+  ::-webkit-scrollbar-track { background: var(--bg); }
+  ::-webkit-scrollbar-thumb { background: var(--muted2); border-radius: 2px; }
+  a { color: inherit; text-decoration: none; }
+</style>
 </head>
-
 <body>
-    <header id="cabecalho">
-        <nav>
-            <ul class="menu">
-                <li><a href="#" id="principal" class="navegacao" data-hover="Home">Home</a></li>
-                <li><a href="#" id="segunda" class="navegacao" data-hover="Sobre Mim">Sobre Mim</a></li>
-                <li><a href="#" id="terceira" class="navegacao" data-hover="Portifólio">Portifólio</a></li>
-                <!-- <li><a href="#" id="quarta" class="navegacao" data-hover="Tecnologias">Tecnologias</a></li> -->
-                <li><a href="#" id="quinta" class="navegacao" data-hover="Contato">Contato</a></li>
-            </ul>
-        </nav>
-    </header>
-    <main>
-        <section class="section" id="principal">
-            <div class="conteudo-home">
-                <p class="nome">Gabriel Tagliari Rodrigo</p>
-                <p class="funcao">Software Developer</p>
-                <div id="segunda" class="botao me-conheca">
-                    <a href="#">Me conheça</a>
-                </div>
-            </div>
-        </section>
-        <section class="section" id="segunda">
-            <div class="conteudo-sobre-mim">
-                <div class="imagem">
-                    <img class="minha-foto" src="img/minha-foto.jpg" alt="Minha foto">
-                </div>
-                <div class="sobre-mim">
-                    <h1 class="sobre-mim-titulo">Um pouco sobre mim</h1>
-                    <div class="sobre-mim-descricao">
-                        <p>Meu nome é Gabriel. Tenho <span id="idade"></span>. 
-                            Desde criança sou fascinado por tecnologia e games.
-                            Gosto muito de aprender, independente do que seja. 
-                            O aprendizado não só abre portas como nos torna melhores a cada dia e melhoria contínua é o que eu almejo sempre.
-                            Atualmente atuo como desenvolvedor Java back-end.
-                            Considero o trabalho em equipe a chave do sucesso de qualquer profissional.
-                        </p>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <section class="section" id="terceira">
-            <h1 class="titulo-section">Portifólio</h1>
-            <div class="conteudo-portifolio">
-                <div class="projeto">
-                    <a href="#infobeacons">
-                        <div class="imagem">
-                            <img src="img/logo-infobeacons_white.png" alt="Logotipo do aplicativo Infobeacons">
-                        </div>
-                    </a>
-                    <div class="descricao">
-                        <h1 class="titulo">InfoBeacons</h1>
-                        <p class="texto">Aplicativo Android que utiliza beacons para acessibilidade</p>
-                    </div>
-                </div>
-                <div class="projeto">
-                    <a href="#q8rn">
-                        <div class="imagem">
-                            <img src="img/logo_simples.png" alt="Logotipo do aplicativo Q8RN">
-                        </div>
-                    </a>
-                    <div class="descricao">
-                        <h1 class="titulo">Q8RN</h1>
-                        <p class="texto">Aplicativo Android do questionário dos oito remédios naturais</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <section class="section" id="quinta">
-                <h1 class="titulo-section">Contato</h1>
-                <div class="conteudo-contatos">
-                    <ul class="icones-redes-sociais">
-                        <li>
-                            <a href="https://github.com/gabrieltagliari" class="icones-sociais-github">
-                                Github
-                            </a>
-                        </li>
-                        <li>
-                            <a href="https://www.instagram.com/gabriel_tagliari" class="icones-sociais-instagram">
-                                Instagram
-                            </a>
-                        </li>
-                        <li>
-                            <a href="https://www.linkedin.com/in/gabrieltagliari" class="icones-sociais-linkedin">
-                                LinkedIn
-                            </a>
-                        </li>
-                    </ul>
-                </div>
-        </section>
+<script type="text/babel">
 
-        <footer class="rodape">
-            &copy; 2018 Gabriel Tagliari Rodrigo
-        </footer>
-        <!-- Modal InfoBeacons -->
-        <div id="infobeacons" class="modal">
-            <div>
-                <a href="#fechar" title="Fechar" class="fechar">X</a>
-                <h2>InfoBeacons</h2>
-                <p>
-                    O projeto tem por objetivo trazer às pessoas as informações necessárias do que lhes é exposto nos museus
-                    através de seus aparelhos android que lêem as informações cadastradas nos beacons de
-                    cada obra. Com o aplicativo aberto, ao aproximar o smartphone ou tablet serão exibidas
-                    as informações cadastradas para aquele determinado beacon mais próximo encontrado
-                    pelo bluetooth do dispositivo. Este aplicativo foi criado para atender essa necessidade de
-                    informação e principalmente de acessibilidade.
-                </p>
-                <h2>Tecnologias Utilizadas</h2>
-                <div class="tecnologias-utilizadas">
-                    <div>
-                        <div class="tecnologias-android"></div>
-                        <span class="tooltiptext">Android</span>
-                    </div>
-                    <div>
-                        <div class="tecnologias-ibeacon"></div>
-                        <span class="tooltiptext">Beacon</span>
-                    </div>
-                    <div>
-                        <div class="tecnologias-bluetooth"></div>
-                        <span class="tooltiptext">Bluetooth</span>
-                    </div>
-                </div>
-                <h2>Imagens</h2>
-                <div class="imagens-grid">
-                    <div>
-                        <img src="img/infobeacons-1.png" alt="Logo do Android">
-                    </div>
-                    <div>
-                        <img src="img/infobeacons-2.png" alt="Logo do iBeacon">
-                    </div>
-                </div>
-            </div>
+
+const { useState, useEffect, useRef, useCallback } = React;
+
+// ─── TWEAKS ──────────────────────────────────────────────────────────────────
+const TWEAK_DEFAULTS = /*EDITMODE-BEGIN*/{
+  "accentColor": "rgb(161, 227, 38)",
+  "accentLabel": "Lima",
+  "fontStyle": "geometric",
+  "graphDensity": 87,
+  "showBlogDates": false
+}/*EDITMODE-END*/;
+
+// ─── GRAPH CANVAS ────────────────────────────────────────────────────────────
+function GraphCanvas({ accent, density }) {
+  const GRAPH_COLOR = '#a1e326';
+  const canvasRef = useRef(null);
+  const stateRef = useRef({ nodes: [], mouse: { x: -9999, y: -9999 }, raf: null, w: 0, h: 0 });
+
+  useEffect(() => {
+    const canvas = canvasRef.current;
+    const ctx = canvas.getContext('2d');
+    const S = stateRef.current;
+
+    function resize() {
+      S.w = canvas.width = window.innerWidth;
+      S.h = canvas.height = window.innerHeight;
+    }
+    resize();
+    window.addEventListener('resize', resize);
+
+    const COUNT = density;
+    S.nodes = Array.from({ length: COUNT }, () => ({
+      x: Math.random() * S.w,
+      y: Math.random() * S.h,
+      vx: (Math.random() - 0.5) * 0.25,
+      vy: (Math.random() - 0.5) * 0.25,
+      r: Math.random() * 2.5 + 1,
+      pulse: Math.random() * Math.PI * 2,
+      bright: Math.random() > 0.85
+    }));
+
+    const onMove = (e) => {
+      S.mouse.x = e.clientX;S.mouse.y = e.clientY;
+    };
+    window.addEventListener('mousemove', onMove);
+
+    // Parse accent to rgb
+    function hexToRgb(hex) {
+      const r = parseInt(hex.slice(1, 3), 16),g = parseInt(hex.slice(3, 5), 16),b = parseInt(hex.slice(5, 7), 16);
+      return `${r},${g},${b}`;
+    }
+
+    function draw() {
+      ctx.clearRect(0, 0, S.w, S.h);
+      const rgb = hexToRgb(GRAPH_COLOR);
+      const MAX_DIST = 160;
+      const now = Date.now() / 1000;
+
+      S.nodes.forEach((n) => {
+        n.x += n.vx;n.y += n.vy;
+        if (n.x < -20) n.x = S.w + 20;
+        if (n.x > S.w + 20) n.x = -20;
+        if (n.y < -20) n.y = S.h + 20;
+        if (n.y > S.h + 20) n.y = -20;
+        n.pulse += 0.018;
+      });
+
+      // Draw edges
+      for (let i = 0; i < S.nodes.length; i++) {
+        for (let j = i + 1; j < S.nodes.length; j++) {
+          const a = S.nodes[i],b = S.nodes[j];
+          const dx = a.x - b.x,dy = a.y - b.y;
+          const d = Math.sqrt(dx * dx + dy * dy);
+          if (d < MAX_DIST) {
+            const alpha = (1 - d / MAX_DIST) * 0.15;
+            ctx.beginPath();
+            ctx.strokeStyle = `rgba(${rgb},${alpha})`;
+            ctx.lineWidth = 0.6;
+            ctx.moveTo(a.x, a.y);
+            ctx.lineTo(b.x, b.y);
+            ctx.stroke();
+          }
+        }
+      }
+
+      // Mouse proximity edges
+      S.nodes.forEach((n) => {
+        const dx = n.x - S.mouse.x,dy = n.y - S.mouse.y;
+        const d = Math.sqrt(dx * dx + dy * dy);
+        if (d < 120) {
+          const alpha = (1 - d / 120) * 0.5;
+          ctx.beginPath();
+          ctx.strokeStyle = `rgba(${rgb},${alpha})`;
+          ctx.lineWidth = 0.8;
+          ctx.moveTo(n.x, n.y);
+          ctx.lineTo(S.mouse.x, S.mouse.y);
+          ctx.stroke();
+        }
+      });
+
+      // Draw nodes
+      S.nodes.forEach((n) => {
+        const pulse = 0.5 + 0.5 * Math.sin(n.pulse);
+        const baseAlpha = n.bright ? 0.7 + pulse * 0.3 : 0.2 + pulse * 0.15;
+        ctx.beginPath();
+        ctx.arc(n.x, n.y, n.r, 0, Math.PI * 2);
+        ctx.fillStyle = `rgba(${rgb},${baseAlpha})`;
+        ctx.fill();
+        if (n.bright) {
+          ctx.beginPath();
+          ctx.arc(n.x, n.y, n.r * 3, 0, Math.PI * 2);
+          ctx.fillStyle = `rgba(${rgb},${pulse * 0.06})`;
+          ctx.fill();
+        }
+      });
+
+      S.raf = requestAnimationFrame(draw);
+    }
+    draw();
+
+    return () => {
+      cancelAnimationFrame(S.raf);
+      window.removeEventListener('resize', resize);
+      window.removeEventListener('mousemove', onMove);
+    };
+  }, [accent, density]);
+
+  return <canvas ref={canvasRef} style={{ position: 'fixed', top: 0, left: 0, width: '100%', height: '100%', pointerEvents: 'none', zIndex: 0, opacity: 1 }} />;
+}
+
+// ─── NAV ─────────────────────────────────────────────────────────────────────
+function Nav({ accent }) {
+  const [scrolled, setScrolled] = useState(false);
+  useEffect(() => {
+    const fn = () => setScrolled(window.scrollY > 60);
+    window.addEventListener('scroll', fn);
+    return () => window.removeEventListener('scroll', fn);
+  }, []);
+  return (
+    <nav style={{
+      position: 'fixed', top: 0, left: 0, right: 0, zIndex: 100,
+      padding: '20px 48px',
+      display: 'flex', alignItems: 'center', justifyContent: 'space-between',
+      background: scrolled ? 'rgba(7,7,10,0.9)' : 'transparent',
+      backdropFilter: scrolled ? 'blur(16px)' : 'none',
+      borderBottom: scrolled ? `1px solid rgba(30,30,46,0.8)` : '1px solid transparent',
+      transition: 'all 0.4s ease'
+    }}>
+      <span style={{ fontFamily: 'var(--font-mono)', fontSize: 13, color: accent, letterSpacing: '0.08em' }}>GTR</span>
+      <div style={{ display: 'flex', gap: 32 }}>
+        {[['Sobre', 'about'], ['Projetos', 'projects']].map(([label, anchor]) =>
+        <a key={label} href={`#${anchor}`} style={{
+          fontFamily: 'var(--font-mono)', fontSize: 12, color: 'var(--muted)',
+          letterSpacing: '0.1em', textTransform: 'uppercase',
+          transition: 'color 0.2s'
+        }}
+        onMouseEnter={(e) => e.target.style.color = accent}
+        onMouseLeave={(e) => e.target.style.color = 'var(--muted)'}>
+          {label}</a>
+        )}
+      </div>
+    </nav>);
+
+}
+
+// ─── SECTION REVEAL HOOK ─────────────────────────────────────────────────────
+function useReveal() {
+  const ref = useRef(null);
+  const [visible, setVisible] = useState(false);
+  useEffect(() => {
+    const obs = new IntersectionObserver(([e]) => {if (e.isIntersecting) setVisible(true);}, { threshold: 0.1 });
+    if (ref.current) obs.observe(ref.current);
+    return () => obs.disconnect();
+  }, []);
+  return [ref, visible];
+}
+
+// ─── HERO ────────────────────────────────────────────────────────────────────
+function Hero({ accent }) {
+  const [loaded, setLoaded] = useState(false);
+  useEffect(() => {setTimeout(() => setLoaded(true), 100);}, []);
+
+  const lines = [
+  { text: 'Gabriel Tagliari Rodrigo', size: 'clamp(40px,6vw,88px)', weight: 700, delay: 0 },
+  { text: 'Líder de Engenharia', size: 'clamp(18px,2.5vw,32px)', weight: 300, delay: 120, mono: true, color: accent },
+  { text: 'Construo os times que constroem os sistemas.', size: 'clamp(14px,1.5vw,20px)', weight: 400, delay: 240, color: 'var(--muted)' }];
+
+
+  return (
+    <section id="hero" style={{
+      minHeight: '100vh', display: 'flex', alignItems: 'center',
+      padding: 'clamp(80px,10vw,140px) clamp(24px,8vw,96px)',
+      position: 'relative', zIndex: 1, color: "rgb(255, 254, 254)"
+    }}>
+      <div style={{ maxWidth: 860 }}>
+        {lines.map((l, i) =>
+        <div key={i} style={{
+          opacity: loaded ? 1 : 0,
+          transform: loaded ? 'translateY(0)' : 'translateY(28px)',
+          transition: `opacity 0.8s ease ${l.delay}ms, transform 0.8s ease ${l.delay}ms`,
+          marginBottom: i === 0 ? 12 : i === 1 ? 24 : 0
+        }}>
+            <span style={{
+            fontFamily: l.mono ? 'var(--font-mono)' : 'var(--font-head)',
+            fontSize: l.size, fontWeight: l.weight, lineHeight: 1.1,
+            color: l.color || 'var(--text)',
+            letterSpacing: l.mono ? '0.06em' : '-0.02em',
+            display: 'block'
+          }}>{l.text}</span>
+          </div>
+        )}
+        <div style={{
+          opacity: loaded ? 1 : 0,
+          transform: loaded ? 'translateY(0)' : 'translateY(28px)',
+          transition: 'opacity 0.8s ease 400ms, transform 0.8s ease 400ms',
+          marginTop: 48, display: 'flex', gap: 16, flexWrap: 'wrap'
+        }}>
+          {['Liderança de Times', 'IA', 'Engenharia', 'AWS', 'Design de Sistemas'].map((tag) =>
+          <span key={tag} style={{
+            fontFamily: 'var(--font-mono)', fontSize: 11, padding: '6px 14px',
+            border: `1px solid var(--border)`, borderRadius: 2, color: 'var(--muted)',
+            letterSpacing: '0.08em', textTransform: 'uppercase',
+            background: 'rgba(14,14,21,0.6)'
+          }}>{tag}</span>
+          )}
+        </div>
+        <div style={{
+          opacity: loaded ? 1 : 0, transition: 'opacity 1s ease 600ms',
+          marginTop: 64, display: 'flex', alignItems: 'center', gap: 12
+        }}>
+          <div style={{ width: 32, height: 1, background: accent }} />
+          <span style={{ fontFamily: 'var(--font-mono)', fontSize: 11, color: 'var(--muted)', letterSpacing: '0.1em' }}>
+            ROLE PARA EXPLORAR
+          </span>
+        </div>
+      </div>
+      {/* Decorative graph node cluster */}
+      <div style={{ position: 'absolute', right: '8%', top: '50%', transform: 'translateY(-50%)', opacity: 0.15, pointerEvents: 'none' }}>
+        <svg width="280" height="280" viewBox="0 0 280 280">
+          {[[140, 140, 16], [80, 80, 8], [200, 90, 10], [220, 180, 7], [70, 200, 9], [160, 220, 6], [100, 160, 5], [190, 50, 7]].map(([x, y, r], i) =>
+          <circle key={i} cx={x} cy={y} r={r} fill={accent} opacity={0.6 + i * 0.04} />
+          )}
+          {[[140, 140, 80, 80], [140, 140, 200, 90], [140, 140, 220, 180], [140, 140, 70, 200], [80, 80, 100, 160], [200, 90, 190, 50], [220, 180, 200, 90], [70, 200, 100, 160]].map(([x1, y1, x2, y2], i) =>
+          <line key={i} x1={x1} y1={y1} x2={x2} y2={y2} stroke={accent} strokeWidth="0.8" opacity="0.4" />
+          )}
+        </svg>
+      </div>
+    </section>);
+
+}
+
+// ─── PROJECTS ────────────────────────────────────────────────────────────────
+function Projects({ accent }) {
+  const [ref, visible] = useReveal();
+  const [open, setOpen] = useState(false);
+
+  const project = {
+    id: 'q8rn', code: 'Q8RN',
+    title: 'Q8RN - Questionário dos Oito Remédios Naturais',
+    subtitle: 'Plataforma de pesquisa · Vue 3 · Firebase',
+    problem: 'Um grupo de pesquisa precisava de uma plataforma de questionários escalável e confiável para coletar dados estruturados de saúde sobre os Oito Remédios Naturais — com rastreamento em tempo real, autenticação segura e armazenamento de longo prazo sem custos elevados de infraestrutura.',
+    architecture: [
+    { node: 'Vue 3 SPA', role: 'Framework frontend', detail: 'Composition API + estado reativo, UI responsiva para pesquisadores em campo no mobile e desktop' },
+    { node: 'Firebase Auth', role: 'Camada de autenticação', detail: 'Email/senha + sessões anônimas para respondentes, controle de acesso por função para pesquisadores' },
+    { node: 'Realtime DB', role: 'Sincronização em tempo real', detail: 'Latência abaixo de 100ms para envios simultâneos de formulários; sem necessidade de provisionar servidores' },
+    { node: 'Cloud Storage', role: 'Camada de ativos', detail: 'Armazena anexos de mídia e datasets exportados; CDN global para acesso rápido' },
+    { node: 'Analytics', role: 'Camada de insights', detail: 'Eventos customizados rastreando taxa de conclusão, pontos de abandono e duração da sessão por pergunta' },
+    { node: 'Hosting', role: 'Entrega', detail: 'CI/CD zero-config via Firebase Hosting; CDN global com SSL incluso' }],
+
+    decisions: [
+    { title: 'Por que Firebase e não um backend próprio?', body: 'O grupo de pesquisa não tinha capacidade de DevOps. O Firebase entregou auth, storage, sincronização em tempo real e hosting como um único serviço gerenciado — reduzindo o overhead operacional a quase zero, atendendo todos os requisitos de dados.' },
+    { title: 'Por que Vue 3 e não React?', body: 'Para fins de estudos e por ser uma linguagem que na época eu gostava mais, simples assim :)' }],
+
+    stack: ['Vue 3', 'Firebase Auth', 'Realtime Database', 'Cloud Storage', 'Analytics', 'Firebase Hosting', 'CSS3'],
+    status: 'Entregue'
+  };
+
+  return (
+    <section id="projects" ref={ref} style={{
+      padding: 'clamp(80px,10vw,140px) clamp(24px,8vw,96px)',
+      position: 'relative', zIndex: 1
+    }}>
+      <div style={{
+        opacity: visible ? 1 : 0, transform: visible ? 'none' : 'translateY(40px)',
+        transition: 'all 0.8s ease'
+      }}>
+        <div style={{ display: 'flex', alignItems: 'baseline', gap: 20, marginBottom: 64 }}>
+          <span style={{ fontFamily: 'var(--font-mono)', fontSize: 11, color: accent, letterSpacing: '0.15em' }}>02 — PROJETOS</span>
+          <div style={{ flex: 1, height: 1, background: 'var(--border)' }} />
         </div>
 
-        <!-- Modal Q8RN -->
-        <div id="q8rn" class="modal">
+        {/* Project Card */}
+        <div style={{
+          border: `1px solid ${open ? accent : 'var(--border)'}`,
+          borderRadius: 4, overflow: 'hidden',
+          background: 'var(--surface)', transition: 'border-color 0.3s ease'
+        }}>
+          {/* Header */}
+          <div
+            onClick={() => setOpen(!open)}
+            style={{
+              padding: '32px 40px', cursor: 'pointer', display: 'flex',
+              justifyContent: 'space-between', alignItems: 'center',
+              background: open ? 'rgba(249,115,22,0.04)' : 'transparent',
+              transition: 'background 0.3s'
+            }}>
+            
             <div>
-                <a href="#fechar" title="Fechar" class="fechar">X</a>
-                <h2>Q8RN</h2>
-                <p>
-                    O projeto feito em Android permite a realização de questionário dos oito remédios naturais. 
-                    No aplicativo são inseridos os dados biológicos, pessoais e religiosos do indivíduo.
-                    Em seguida são respondidas as perguntas referentes aos hábitos dele e no fim é gerado um escore com base nas respostas.
-                </p>
-                <h2>Tecnologias Utilizadas</h2>
-                <div class="tecnologias-utilizadas">
-                    <div>
-                        <div class="tecnologias-android"></div>
-                        <span class="tooltiptext">Android</span>
-                    </div>
-                    <div>
-                        <div class="tecnologias-database"></div>
-                        <span class="tooltiptext">SQLite</span>
-                    </div>
-                </div>
-                <h2>Imagens</h2>
-                <div class="imagens-grid">
-                    <div>
-                        <img src="img/q8rn-1.png" alt="Logo do Android">
-                    </div>
-                    <div>
-                        <img src="img/q8rn-2.png" alt="Logo do iBeacon">
-                    </div>
-                </div>
+              <div style={{ display: 'flex', alignItems: 'center', gap: 16, marginBottom: 10 }}>
+                <span style={{ fontFamily: 'var(--font-mono)', fontSize: 11, color: accent, letterSpacing: '0.12em', background: 'rgba(249,115,22,0.1)', padding: '4px 10px', borderRadius: 2 }}>{project.code}</span>
+                <span style={{ fontFamily: 'var(--font-mono)', fontSize: 11, color: 'var(--muted)', letterSpacing: '0.08em' }}>{project.status}</span>
+              </div>
+              <h2 style={{ fontSize: 'clamp(22px,3vw,36px)', fontWeight: 600, lineHeight: 1.2, marginBottom: 8, letterSpacing: '-0.02em' }}>{project.title}</h2>
+              <div style={{ display: 'flex', alignItems: 'center', gap: 16, flexWrap: 'wrap' }}>
+                <p style={{ fontFamily: 'var(--font-mono)', fontSize: 12, color: 'var(--muted)' }}>{project.subtitle}</p>
+                <a href="https://q8rn.com" target="_blank" rel="noreferrer" onClick={e => e.stopPropagation()} style={{ fontFamily: 'var(--font-mono)', fontSize: 11, color: accent, letterSpacing: '0.06em' }}>q8rn.com →</a>
+              </div>
             </div>
-        </div>
-    </main>
+            <div style={{
+              width: 40, height: 40, border: `1px solid ${open ? accent : 'var(--border)'}`,
+              borderRadius: '50%', display: 'flex', alignItems: 'center', justifyContent: 'center',
+              flexShrink: 0, transition: 'all 0.3s', transform: open ? 'rotate(45deg)' : 'none',
+              marginLeft: 24
+            }}>
+              <svg width="14" height="14" viewBox="0 0 14 14" fill="none">
+                <line x1="7" y1="1" x2="7" y2="13" stroke={open ? accent : 'var(--muted)'} strokeWidth="1.5" />
+                <line x1="1" y1="7" x2="13" y2="7" stroke={open ? accent : 'var(--muted)'} strokeWidth="1.5" />
+              </svg>
+            </div>
+          </div>
 
-    <!-- Scripts -->
-    <script src="js/jquery/jquery.min.js"></script>
-    <script src="js/index.js"></script>
+          {/* Expanded */}
+          <div style={{
+            maxHeight: open ? '2000px' : '0', overflow: 'hidden',
+            transition: 'max-height 0.6s ease'
+          }}>
+            <div style={{ padding: '0 40px 40px', borderTop: `1px solid var(--border)` }}>
+              {/* Preview image */}
+              <div style={{ marginBottom: 40 }}>
+                <a href="https://q8rn.com" target="_blank" rel="noreferrer">
+                  <img src="q8rn-preview.png" alt="Q8RN preview"
+                    style={{ width: '100%', maxHeight: 260, objectFit: 'cover', objectPosition: 'top', borderRadius: 4, border: '1px solid var(--border)', display: 'block', transition: 'opacity 0.2s' }}
+                    onMouseEnter={e => e.target.style.opacity = '0.85'}
+                    onMouseLeave={e => e.target.style.opacity = '1'}
+                  />
+                </a>
+              </div>
+              {/* Problem */}
+              <div style={{ paddingTop: 32, marginBottom: 40 }}>
+                <span style={{ fontFamily: 'var(--font-mono)', fontSize: 10, color: accent, letterSpacing: '0.15em', display: 'block', marginBottom: 12 }}>CONTEXTO</span>
+                <p style={{ fontSize: 16, lineHeight: 1.7, color: 'var(--muted)', maxWidth: 680 }}>{project.problem}</p>
+              </div>
+
+              {/* Architecture */}
+              <div style={{ marginBottom: 40 }}>
+                <span style={{ fontFamily: 'var(--font-mono)', fontSize: 10, color: accent, letterSpacing: '0.15em', display: 'block', marginBottom: 20 }}>ARQUITETURA</span>
+                <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(260px, 1fr))', gap: 12 }}>
+                  {project.architecture.map((a, i) =>
+                  <ArchNode key={i} node={a} accent={accent} index={i} />
+                  )}
+                </div>
+              </div>
+
+              {/* Decisions */}
+              <div style={{ marginBottom: 36 }}>
+                <span style={{ fontFamily: 'var(--font-mono)', fontSize: 10, color: accent, letterSpacing: '0.15em', display: 'block', marginBottom: 20 }}>DECISÕES-CHAVE</span>
+                <div style={{ display: 'flex', flexDirection: 'column', gap: 12 }}>
+                  {project.decisions.map((d, i) =>
+                  <div key={i} style={{ padding: '20px 24px', background: 'var(--surface2)', borderRadius: 3, borderLeft: `3px solid ${accent}` }}>
+                      <p style={{ fontWeight: 600, marginBottom: 8, fontSize: 15 }}>{d.title}</p>
+                      <p style={{ fontSize: 14, color: 'var(--muted)', lineHeight: 1.7 }}>{d.body}</p>
+                    </div>
+                  )}
+                </div>
+              </div>
+
+              {/* Stack */}
+              <div>
+                <span style={{ fontFamily: 'var(--font-mono)', fontSize: 10, color: accent, letterSpacing: '0.15em', display: 'block', marginBottom: 14 }}>TECNOLOGIAS</span>
+                <div style={{ display: 'flex', gap: 8, flexWrap: 'wrap' }}>
+                  {project.stack.map((s) =>
+                  <span key={s} style={{
+                    fontFamily: 'var(--font-mono)', fontSize: 11, padding: '5px 12px',
+                    border: '1px solid var(--border)', borderRadius: 2, color: 'var(--muted)'
+                  }}>{s}</span>
+                  )}
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>);
+
+}
+
+function ArchNode({ node, accent, index }) {
+  const [hover, setHover] = useState(false);
+  return (
+    <div
+      onMouseEnter={() => setHover(true)}
+      onMouseLeave={() => setHover(false)}
+      style={{
+        padding: '18px 20px', border: `1px solid ${hover ? accent : 'var(--border)'}`,
+        borderRadius: 3, background: hover ? 'rgba(249,115,22,0.04)' : 'var(--surface2)',
+        transition: 'all 0.25s ease', cursor: 'default'
+      }}>
+      <div style={{ display: 'flex', alignItems: 'center', gap: 8, marginBottom: 8 }}>
+        <div style={{ width: 6, height: 6, borderRadius: '50%', background: accent, flexShrink: 0 }} />
+        <span style={{ fontFamily: 'var(--font-mono)', fontSize: 12, color: accent, fontWeight: 500 }}>{node.node}</span>
+      </div>
+      <p style={{ fontSize: 11, color: 'var(--muted)', fontFamily: 'var(--font-mono)', marginBottom: 6, textTransform: 'uppercase', letterSpacing: '0.08em' }}>{node.role}</p>
+      <p style={{ fontSize: 13, color: hover ? 'var(--text)' : 'var(--muted)', lineHeight: 1.6, transition: 'color 0.25s' }}>{node.detail}</p>
+    </div>);
+
+}
+
+// ─── BLOG ────────────────────────────────────────────────────────────────────
+function Blog({ accent, showDates }) {
+  const [ref, visible] = useReveal();
+  const [hovered, setHovered] = useState(null);
+
+  const posts = [
+  {
+    id: 1,
+    tag: 'Arquitetura',
+    title: 'Firebase vs. Backend Próprio: Quando Serviços Gerenciados Vencem',
+    excerpt: 'No projeto Q8RN, tínhamos uma restrição dura: zero de capacidade DevOps. Veja como avaliei os trade-offs entre controle e simplicidade operacional — e o que faria diferente.',
+    date: 'Mar 2025',
+    readTime: '6 min'
+  },
+  {
+    id: 2,
+    tag: 'Liderança',
+    title: 'Construindo Times de Alta Performance Sem Queimar Ninguém',
+    excerpt: 'Velocidade não é sustentável se vem apenas de pressão. Estes são os sistemas que uso para manter times entregando rápido com energia alta no longo prazo.',
+    date: 'Jan 2025',
+    readTime: '8 min'
+  },
+  {
+    id: 3,
+    tag: 'AWS',
+    title: 'As Decisões de Infraestrutura Que Realmente Importam em Escala',
+    excerpt: 'A maioria dos problemas de escala não se resolve jogando mais computação. Reflexão sobre como decisões arquiteturais tomadas cedo se acumulam — para o bem ou para o mal — conforme o tráfego cresce.',
+    date: 'Nov 2024',
+    readTime: '7 min'
+  }];
+
+
+  return (
+    <section id="blog" ref={ref} style={{
+      padding: 'clamp(80px,10vw,140px) clamp(24px,8vw,96px)',
+      position: 'relative', zIndex: 1
+    }}>
+      <div style={{
+        opacity: visible ? 1 : 0, transform: visible ? 'none' : 'translateY(40px)',
+        transition: 'all 0.8s ease'
+      }}>
+        <div style={{ display: 'flex', alignItems: 'baseline', gap: 20, marginBottom: 64 }}>
+          <span style={{ fontFamily: 'var(--font-mono)', fontSize: 11, color: accent, letterSpacing: '0.15em' }}>03 — PENSAMENTOS</span>
+          <div style={{ flex: 1, height: 1, background: 'var(--border)' }} />
+        </div>
+
+        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(300px, 1fr))', gap: 1, border: '1px solid var(--border)', borderRadius: 4, overflow: 'hidden' }}>
+          {posts.map((p, i) =>
+          <div
+            key={p.id}
+            onMouseEnter={() => setHovered(i)}
+            onMouseLeave={() => setHovered(null)}
+            style={{
+              padding: '36px 32px', background: hovered === i ? 'var(--surface2)' : 'var(--surface)',
+              borderRight: i < posts.length - 1 ? '1px solid var(--border)' : 'none',
+              transition: 'background 0.25s', cursor: 'pointer', position: 'relative'
+            }}>
+            
+              <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: 20 }}>
+                <span style={{
+                fontFamily: 'var(--font-mono)', fontSize: 10, color: accent,
+                background: 'rgba(249,115,22,0.08)', padding: '4px 10px', borderRadius: 2, letterSpacing: '0.1em'
+              }}>{p.tag}</span>
+                {showDates && <span style={{ fontFamily: 'var(--font-mono)', fontSize: 10, color: 'var(--muted)' }}>{p.date}</span>}
+              </div>
+              <h3 style={{ fontSize: 18, fontWeight: 600, lineHeight: 1.35, marginBottom: 14, letterSpacing: '-0.01em' }}>{p.title}</h3>
+              <p style={{ fontSize: 14, color: 'var(--muted)', lineHeight: 1.7, marginBottom: 24 }}>{p.excerpt}</p>
+              <div style={{ display: 'flex', alignItems: 'center', gap: 8 }}>
+                <span style={{ fontFamily: 'var(--font-mono)', fontSize: 11, color: hovered === i ? accent : 'var(--muted)', transition: 'color 0.25s' }}>Ler →</span>
+                <span style={{ fontFamily: 'var(--font-mono)', fontSize: 10, color: 'var(--muted2)' }}>{p.readTime}</span>
+              </div>
+            </div>
+          )}
+        </div>
+      </div>
+    </section>);
+
+}
+
+// ─── ABOUT ───────────────────────────────────────────────────────────────────
+function About({ accent }) {
+  const [ref, visible] = useReveal();
+  const principles = [
+  { n: '01', title: 'Jornadas antes de funcionalidades', body: 'Um sistema bem projetado torna cada funcionalidade futura mais fácil. Invisto nas fundações cedo — mesmo quando isso significa dizer não à velocidade de curto prazo.' },
+  { n: '02', title: 'Clareza antes de esperteza', body: 'A melhor decisão de engenharia é a que todo o time entende e consegue estender. Código esperto que só uma pessoa lê é um passivo.' },
+  { n: '03', title: 'Pessoas são a arquitetura', body: 'Escolhas de tecnologia decaem. Hábitos de time se acumulam. Dedico mais tempo às estruturas de comunicação e à posse das decisões do que à seleção de ferramentas.' },
+  { n: '04', title: 'Complexidade gerenciada', body: 'Complexidade às vezes é inevitável — mas deve ser uma decisão deliberada, rastreada, documentada e revisitada. Nunca acidental.' }];
+
+
+  return (
+    <section id="about" ref={ref} style={{
+      padding: 'clamp(80px,10vw,140px) clamp(24px,8vw,96px)',
+      position: 'relative', zIndex: 1
+    }}>
+      <div style={{
+        opacity: visible ? 1 : 0, transform: visible ? 'none' : 'translateY(40px)',
+        transition: 'all 0.8s ease'
+      }}>
+        <div style={{ display: 'flex', alignItems: 'baseline', gap: 20, marginBottom: 64 }}>
+          <span style={{ fontFamily: 'var(--font-mono)', fontSize: 11, color: accent, letterSpacing: '0.15em' }}>01 — FILOSOFIA</span>
+          <div style={{ flex: 1, height: 1, background: 'var(--border)' }} />
+        </div>
+
+        <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 48, alignItems: 'start' }}>
+          <div>
+            {/* Photo */}
+            <div style={{ marginBottom: 36, display: 'flex', alignItems: 'center', gap: 24 }}>
+              <div style={{
+                width: 88, height: 88, borderRadius: '50%', flexShrink: 0,
+                border: `2px solid ${accent}`,
+                overflow: 'hidden',
+                boxShadow: `0 0 20px rgba(167,139,250,0.2)`
+              }}>
+                <img src="gabriel.png" alt="Gabriel Tagliari Rodrigo"
+                style={{ width: '100%', height: '100%', objectFit: 'cover', objectPosition: 'center top' }} />
+              </div>
+              <div>
+                <p style={{ fontWeight: 600, fontSize: 16, marginBottom: 4 }}>Gabriel Tagliari Rodrigo</p>
+                <p style={{ fontFamily: 'var(--font-mono)', fontSize: 12, color: accent }}>Engineering Lead</p>
+              </div>
+            </div>
+            <p style={{ fontSize: 'clamp(22px,2.8vw,34px)', fontWeight: 500, lineHeight: 1.4, letterSpacing: '-0.02em', marginBottom: 24 }}>
+              Liderança de engenharia é sobre{' '}
+              <span style={{ color: accent }}>reduzir o custo da mudança</span>
+              {' '}— não apenas entregar funcionalidades.
+            </p>
+            <p style={{ fontSize: 16, color: 'var(--muted)', lineHeight: 1.8 }}>
+              Atuo na interseção entre pessoas, sistemas e produto. Meu trabalho é tornar problemas difíceis tratáveis — montando o time certo, fazendo as apostas certas cedo e criando as condições organizacionais para que boa engenharia aconteça repetidamente, não apenas uma vez.
+            </p>
+            <a href="https://www.linkedin.com/in/gabrieltagliari/" target="_blank" rel="noreferrer"
+              style={{ display: 'inline-flex', alignItems: 'center', gap: 6, marginTop: 28, fontFamily: 'var(--font-mono)', fontSize: 12, color: 'var(--muted)', letterSpacing: '0.06em', opacity: 0.75, transition: 'opacity 0.2s, color 0.2s' }}
+              onMouseEnter={e => { e.currentTarget.style.opacity = '1'; e.currentTarget.style.color = accent; }}
+              onMouseLeave={e => { e.currentTarget.style.opacity = '0.75'; e.currentTarget.style.color = 'var(--muted)'; }}
+            >↗ linkedin/gabrieltagliari</a>
+          </div>
+          <div style={{ display: 'flex', flexDirection: 'column', gap: 20 }}>
+            {principles.map((p, i) =>
+            <PrincipleRow key={i} p={p} accent={accent} delay={i * 60} visible={visible} />
+            )}
+          </div>
+        </div>
+      </div>
+    </section>);
+
+}
+
+function PrincipleRow({ p, accent, delay, visible }) {
+  const [hover, setHover] = useState(false);
+  return (
+    <div
+      onMouseEnter={() => setHover(true)} onMouseLeave={() => setHover(false)}
+      style={{
+        display: 'flex', gap: 20, padding: '20px 0',
+        borderBottom: '1px solid var(--border)', cursor: 'default',
+        opacity: visible ? 1 : 0, transform: visible ? 'none' : 'translateX(20px)',
+        transition: `opacity 0.6s ease ${delay}ms, transform 0.6s ease ${delay}ms`
+      }}>
+      <span style={{ fontFamily: 'var(--font-mono)', fontSize: 11, color: hover ? accent : 'var(--muted2)', flexShrink: 0, transition: 'color 0.2s', paddingTop: 3 }}>{p.n}</span>
+      <div>
+        <p style={{ fontWeight: 600, fontSize: 15, marginBottom: 6, color: hover ? 'var(--text)' : 'var(--text)', transition: 'color 0.2s' }}>{p.title}</p>
+        <p style={{ fontSize: 13, color: 'var(--muted)', lineHeight: 1.6 }}>{p.body}</p>
+      </div>
+    </div>);
+
+}
+
+// ─── FOOTER ──────────────────────────────────────────────────────────────────
+function Footer({ accent }) {
+  return (
+    <footer style={{
+      padding: 'clamp(48px,6vw,80px) clamp(24px,8vw,96px)',
+      borderTop: '1px solid var(--border)',
+      display: 'flex', justifyContent: 'space-between', alignItems: 'center', flexWrap: 'wrap', gap: 24,
+      position: 'relative', zIndex: 1
+    }}>
+      <span style={{ fontFamily: 'var(--font-mono)', fontSize: 12, color: 'var(--muted)' }}>© 2026 Gabriel Tagliari Rodrigo</span>
+      <a href="https://www.linkedin.com/in/gabrieltagliari/" target="_blank" rel="noreferrer"
+      style={{ fontFamily: 'var(--font-mono)', fontSize: 11, color: 'var(--muted2)', letterSpacing: '0.06em', display: 'flex', alignItems: 'center', gap: 6, opacity: 0.5, transition: 'opacity 0.2s' }}
+      onMouseEnter={e => e.currentTarget.style.opacity = '1'}
+      onMouseLeave={e => e.currentTarget.style.opacity = '0.5'}>
+        linkedin
+      </a>
+    </footer>);
+
+}
+
+
+
+// ─── TWEAKS ──────────────────────────────────────────────────────────────────
+const ACCENT_VARIANTS = [
+{ label: 'Amber', color: '#f97316' },
+{ label: 'Violet', color: '#a78bfa' },
+{ label: 'Cyan', color: '#22d3ee' },
+{ label: 'Verde', color: 'rgb(21, 61, 59)' },
+{ label: 'Lima', color: 'rgb(161, 227, 38)' }];
+
+
+function TweaksPanel({ tweaks, setTweaks, visible, onClose }) {
+  if (!visible) return null;
+  return (
+    <div style={{
+      position: 'fixed', bottom: 100, right: 32, zIndex: 300,
+      background: 'var(--surface)', border: '1px solid var(--border)',
+      borderRadius: 6, padding: 24, width: 260,
+      boxShadow: '0 20px 60px rgba(0,0,0,0.6)'
+    }}>
+      <div style={{ display: 'flex', justifyContent: 'space-between', marginBottom: 20 }}>
+        <span style={{ fontFamily: 'var(--font-mono)', fontSize: 11, color: tweaks.accentColor, letterSpacing: '0.1em' }}>TWEAKS</span>
+        <button onClick={onClose} style={{ background: 'none', border: 'none', color: 'var(--muted)', cursor: 'pointer', fontSize: 16 }}>×</button>
+      </div>
+
+      <div style={{ marginBottom: 20 }}>
+        <p style={{ fontFamily: 'var(--font-mono)', fontSize: 10, color: 'var(--muted)', marginBottom: 10, letterSpacing: '0.1em' }}>COR DE DESTAQUE</p>
+        <div style={{ display: 'flex', gap: 8 }}>
+          {ACCENT_VARIANTS.map((v) =>
+          <button key={v.label} onClick={() => {
+            setTweaks((t) => ({ ...t, accentColor: v.color, accentLabel: v.label }));
+            window.parent.postMessage({ type: '__edit_mode_set_keys', edits: { accentColor: v.color, accentLabel: v.label } }, '*');
+          }} style={{
+            width: 36, height: 36, borderRadius: '50%', background: v.color, border: 'none', cursor: 'pointer',
+            outline: tweaks.accentColor === v.color ? `2px solid ${v.color}` : '2px solid transparent',
+            outlineOffset: 3, transition: 'outline 0.2s'
+          }} title={v.label} />
+          )}
+        </div>
+      </div>
+
+      <div style={{ marginBottom: 20 }}>
+        <p style={{ fontFamily: 'var(--font-mono)', fontSize: 10, color: 'var(--muted)', marginBottom: 10, letterSpacing: '0.1em' }}>DENSIDADE DO GRAFO</p>
+        <input type="range" min={20} max={100} value={tweaks.graphDensity}
+        onChange={(e) => {
+          const v = parseInt(e.target.value);
+          setTweaks((t) => ({ ...t, graphDensity: v }));
+          window.parent.postMessage({ type: '__edit_mode_set_keys', edits: { graphDensity: v } }, '*');
+        }}
+        style={{ width: '100%', accentColor: tweaks.accentColor }} />
+        
+        <span style={{ fontFamily: 'var(--font-mono)', fontSize: 10, color: 'var(--muted)' }}>{tweaks.graphDensity} nós</span>
+      </div>
+
+      <div>
+        <p style={{ fontFamily: 'var(--font-mono)', fontSize: 10, color: 'var(--muted)', marginBottom: 10, letterSpacing: '0.1em' }}>DATAS DO BLOG</p>
+        <button onClick={() => {
+          setTweaks((t) => ({ ...t, showBlogDates: !t.showBlogDates }));
+          window.parent.postMessage({ type: '__edit_mode_set_keys', edits: { showBlogDates: !tweaks.showBlogDates } }, '*');
+        }} style={{
+          fontFamily: 'var(--font-mono)', fontSize: 11, padding: '6px 14px',
+          border: `1px solid ${tweaks.showBlogDates ? tweaks.accentColor : 'var(--border)'}`,
+          background: tweaks.showBlogDates ? 'rgba(249,115,22,0.08)' : 'transparent',
+          color: tweaks.showBlogDates ? tweaks.accentColor : 'var(--muted)',
+          borderRadius: 2, cursor: 'pointer'
+        }}>{tweaks.showBlogDates ? 'Visível' : 'Oculto'}</button>
+      </div>
+    </div>);
+
+}
+
+// ─── APP ─────────────────────────────────────────────────────────────────────
+function App() {
+  const [tweaks, setTweaks] = useState(TWEAK_DEFAULTS);
+  const [tweaksOpen, setTweaksOpen] = useState(false);
+  const accent = tweaks.accentColor;
+
+  // CSS variable sync
+  useEffect(() => {
+    document.documentElement.style.setProperty('--accent', accent);
+    document.documentElement.style.setProperty('--accent-dim', accent + '20');
+    document.documentElement.style.setProperty('--accent-glow', accent + '55');
+  }, [accent]);
+
+  // Tweaks toggle from parent
+  useEffect(() => {
+    const handler = (e) => {
+      if (e.data?.type === '__activate_edit_mode') setTweaksOpen(true);
+      if (e.data?.type === '__deactivate_edit_mode') setTweaksOpen(false);
+    };
+    window.addEventListener('message', handler);
+    window.parent.postMessage({ type: '__edit_mode_available' }, '*');
+    return () => window.removeEventListener('message', handler);
+  }, []);
+
+  return (
+    <>
+      <GraphCanvas accent={accent} density={tweaks.graphDensity} />
+      <Nav accent={accent} />
+      <Hero accent={accent} />
+      <About accent={accent} />
+      <Projects accent={accent} />
+      <Footer accent={accent} />
+      <TweaksPanel tweaks={tweaks} setTweaks={setTweaks} visible={tweaksOpen} onClose={() => setTweaksOpen(false)} />
+    </>);
+
+}
+
+ReactDOM.createRoot(document.getElementById('root')).render(<App />);
+</script>
+<div id="root"></div>
 </body>
 </html>
