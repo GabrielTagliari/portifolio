@@ -1,0 +1,13 @@
+{
+  "permissions": {
+    "allow": [
+      "WebFetch(domain:api.anthropic.com)",
+      "mcp__Claude_in_Chrome__tabs_context_mcp",
+      "Bash(git checkout *)",
+      "Bash(cp /tmp/portifolio/project/gabriel.png ./img/gabriel.png)",
+      "Bash(cp /tmp/portifolio/project/q8rn-preview.png ./img/q8rn-preview.png)",
+      "Bash(git add *)",
+      "Bash(git commit -m ' *)"
+    ]
+  }
+}
